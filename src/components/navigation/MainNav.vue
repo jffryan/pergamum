@@ -1,15 +1,13 @@
 <template>
-  <header class="w-full text-sm">
+  <header :class="['w-full', 'text-sm', headerHeightClass]">
     <div class="fixed top-0 left-0 w-full h-16 bg-white">
       <div
         class="flex flex-nowrap h-full px-8 mx-auto border-b border-solid border-brand-gray-1"
       >
-        <a
-          :href="url"
-          target="_blank"
-          rel="noopener noreferrer"
+        <router-link
+          to="/"
           class="flex items-center h-full text-xl transition duration-150 ease-out hover:text-brand-blue-2"
-          >{{ siteTitle }}</a
+          >{{ siteTitle }}</router-link
         >
         <nav class="h-full ml-12">
           <ul class="flex h-full p-0 m-0 list-none">
@@ -19,11 +17,11 @@
               class="h-full ml-9 first:ml-0 transition duration-150 ease-out"
               data-test="main-nav-list-item"
             >
-              <a
-                :href="menuItem.link"
+              <router-link
+                :to="menuItem.link"
                 tabindex="0"
                 class="flex items-center h-full p-2 hover:text-brand-blue-2"
-                >{{ menuItem.name }}</a
+                >{{ menuItem.name }}</router-link
               >
             </li>
           </ul>
@@ -55,31 +53,42 @@ export default {
       menuItems: [
         {
           name: "Books",
-          link: "/",
+          link: "/books",
         },
         {
           name: "2022",
-          link: "/",
+          link: "/2022",
         },
         {
           name: "Archive",
-          link: "/",
+          link: "/archive",
         },
         {
           name: "Stats",
-          link: "/",
+          link: "/stats",
         },
         {
           name: "Reading list",
-          link: "/",
+          link: "/reading-list",
         },
         {
           name: "Best of",
-          link: "/",
+          link: "/best-of",
+        },
+        {
+          name: "On my radar",
+          link: "/radar",
         },
       ],
     };
   },
-  methods: {},
+  computed: {
+    headerHeightClass() {
+      // Set up logic if this needs to be variable for whatever reason
+      return {
+        "h-16": true,
+      };
+    },
+  },
 };
 </script>
