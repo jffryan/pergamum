@@ -1,26 +1,12 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <main-nav />
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+const { default: MainNav } = require("./components/navigation/MainNav.vue");
 
 export default {
   name: "App",
-  components: {
-    HelloWorld,
-  },
+  components: { MainNav },
 };
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
