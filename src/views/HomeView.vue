@@ -6,9 +6,21 @@
     <div class="col-start-2 col-span-10 border border-red-700">
       <h2 class="text-4xl mb-8">Links</h2>
       <div class="grid grid-cols-4 gap-x-2">
-        <quick-links :linkset="booksLinks" :menu-title="booksTitle" />
-        <quick-links :linkset="yearsLinks" :menu-title="yearsTitle" />
-        <quick-links :linkset="archiveLinks" :menu-title="archiveTitle" />
+        <quick-links
+          layout="vertical"
+          :linkset="booksLinks"
+          :menu-title="booksTitle"
+        />
+        <quick-links
+          layout="vertical"
+          :linkset="yearsLinks"
+          :menu-title="yearsTitle"
+        />
+        <quick-links
+          layout="vertical"
+          :linkset="archiveLinks"
+          :menu-title="archiveTitle"
+        />
       </div>
     </div>
   </div>

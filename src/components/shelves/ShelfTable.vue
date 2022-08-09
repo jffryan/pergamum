@@ -46,17 +46,31 @@
 
 <script>
 // @TODO: Make this agnostic to a specific object for its data
-import books2018 from "@/development/books2018";
+import allBooks from "@/development/allBooks";
 import BookTable from "@/components/books/BookTable.vue";
 export default {
   name: "ShelfTable",
   components: {
     BookTable,
   },
+  props: {
+    shelfSelection: {
+      type: String,
+      default: "all",
+    },
+  },
   data() {
     return {
-      currentShelf: books2018,
+      allBooks,
     };
+  },
+  computed: {
+    currentShelf() {
+      const that = this;
+      // Long term this won't work because it requires every book to be individually categorized into a shelf type
+      // This will make insane amounts of redundant data unless fixed
+      return that.allBooks["books" + that.shelfSelection];
+    },
   },
 };
 </script>
