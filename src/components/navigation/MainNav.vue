@@ -18,10 +18,10 @@
               data-test="main-nav-list-item"
             >
               <router-link
-                :to="menuItem.link"
+                :to="menuItem.path"
                 tabindex="0"
                 class="flex items-center h-full p-2 hover:text-brand-blue-2"
-                >{{ menuItem.name }}</router-link
+                >{{ menuItem.text }}</router-link
               >
             </li>
           </ul>
@@ -31,6 +31,7 @@
             data-test="login-button"
             button-text="Add book"
             button-type="primary"
+            @click="handleClick('add-book')"
           />
         </div>
       </div>
@@ -40,6 +41,8 @@
 
 <script>
 import ActionButton from "@/components/buttons/ActionButton.vue";
+// Going to need a better way to do this than importing the entire utils library every time.
+// import utils from "@/utils";
 
 export default {
   name: "MainNav",
@@ -52,32 +55,28 @@ export default {
       url: "/",
       menuItems: [
         {
-          name: "Books",
-          link: "/books",
+          text: "Books",
+          path: "/books",
         },
         {
-          name: "2022",
-          link: "/2022",
+          text: "2022",
+          path: "/2022",
         },
         {
-          name: "Archive",
-          link: "/archive",
+          text: "Archive",
+          path: "/archive",
         },
         {
-          name: "Stats",
-          link: "/stats",
+          text: "Stats",
+          path: "/stats",
         },
         {
-          name: "Reading list",
-          link: "/reading-list",
+          text: "Reading list",
+          path: "/reading-list",
         },
         {
-          name: "Best of",
-          link: "/best-of",
-        },
-        {
-          name: "On my radar",
-          link: "/radar",
+          text: "On my radar",
+          path: "/radar",
         },
       ],
     };
@@ -88,6 +87,12 @@ export default {
       return {
         "h-16": true,
       };
+    },
+  },
+  methods: {
+    // Would be interesting to set *this* up to call the library of potential action methods that live inside the button
+    handleClick(link) {
+      this.$router.push(link);
     },
   },
 };

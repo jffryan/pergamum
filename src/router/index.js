@@ -9,6 +9,7 @@ import StatsView from "@/views/StatsView.vue";
 import ReadingListView from "@/views/ReadingListView.vue";
 import BestOfView from "@/views/BestOfView.vue";
 import RadarView from "@/views/RadarView.vue";
+import AddBookView from "@/views/AddBookView.vue";
 
 // @todo: error handling? 404?
 
@@ -52,6 +53,11 @@ const routes = [
     path: "/radar",
     name: "radar",
     component: RadarView,
+  },
+  {
+    path: "/add-book",
+    name: "addBook",
+    component: AddBookView,
   },
 ];
 
