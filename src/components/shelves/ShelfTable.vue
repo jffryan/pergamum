@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="grid grid-cols-10 bg-slate-400 mb-2">
+    <div class="grid grid-cols-10 bg-slate-400 py-2">
       <div class="col-span-2">
         <p>Title</p>
       </div>
@@ -20,7 +20,7 @@
         <p>Genre</p>
       </div>
       <div>
-        <p>Status</p>
+        <p>Type</p>
       </div>
       <div>
         <p>Duration</p>
@@ -29,16 +29,34 @@
         <p>Awards</p>
       </div>
     </div>
-    <book-table />
+    <div v-for="(book, i) in currentShelf" :key="book.id">
+      <book-table
+        v-if="i % 2 === 0"
+        :book-details="currentShelf[i]"
+        class="py-1"
+      />
+      <book-table
+        v-else
+        :book-details="currentShelf[i]"
+        class="bg-slate-200 py-1"
+      />
+    </div>
   </section>
 </template>
 
 <script>
+// @TODO: Make this agnostic to a specific object for its data
+import books2018 from "@/development/books2018";
 import BookTable from "@/components/books/BookTable.vue";
 export default {
   name: "ShelfTable",
   components: {
     BookTable,
+  },
+  data() {
+    return {
+      currentShelf: books2018,
+    };
   },
 };
 </script>

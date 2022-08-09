@@ -10,7 +10,7 @@
 </template>
 
 <script>
-// @todo: Make this page dynamic based off url/year, and make this page use programmatic navigation
+// @Todo: Make this page have dynamic imports to pull the proper shelf table data
 import ShelfTable from "@/components/shelves/ShelfTable.vue";
 
 export default {
@@ -19,8 +19,9 @@ export default {
     ShelfTable,
   },
   data() {
+    const that = this;
     return {
-      yearInView: 2022,
+      yearInView: that.$route.params.year,
     };
   },
 };

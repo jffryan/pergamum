@@ -60,7 +60,7 @@ export default {
         },
         {
           text: "2022",
-          path: "/2022",
+          path: "/shelf/2022",
         },
         {
           text: "Archive",

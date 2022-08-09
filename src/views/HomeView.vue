@@ -46,23 +46,23 @@ export default {
       booksTitle: "Books",
       yearsLinks: [
         {
-          path: "/2022",
+          path: "/shelf/2022",
           text: "2022",
         },
         {
-          path: "/2022",
+          path: "/shelf/2021",
           text: "2021",
         },
         {
-          path: "/2022",
+          path: "/shelf/2020",
           text: "2020",
         },
         {
-          path: "/2022",
+          path: "/shelf/2019",
           text: "2019",
         },
         {
-          path: "/2022",
+          path: "/shelf/2018",
           text: "2018",
         },
       ],

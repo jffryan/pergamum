@@ -2,31 +2,31 @@
   <section>
     <div class="grid grid-cols-10">
       <div class="col-span-2">
-        <p>Guns, Germs, and Steel</p>
+        <p>{{ title }}</p>
       </div>
       <div>
-        <p>Jared Diamond</p>
+        <p>{{ author }}</p>
       </div>
       <div>
-        <p>440</p>
+        <p>{{ pageCount }}</p>
       </div>
       <div>
-        <p>1/2/18</p>
+        <p>{{ dateRead }}</p>
       </div>
       <div>
-        <p>5</p>
+        <p>{{ rating }}</p>
       </div>
       <div>
-        <p>History</p>
+        <p>{{ genre }}</p>
       </div>
       <div>
-        <p>PAPER</p>
+        <p>{{ bookType }}</p>
       </div>
       <div>
-        <p>2</p>
+        <p>{{ duration }}</p>
       </div>
       <div>
-        <p></p>
+        <p>{{ awards }}</p>
       </div>
     </div>
   </section>
@@ -37,5 +37,48 @@
 // @todo: Make books a class/object to store as data?
 export default {
   name: "BookTable",
+  props: {
+    bookDetails: {
+      type: Object,
+      default() {
+        return {
+          title: "Title",
+          author: "Author",
+          pageCount: 0,
+          dateRead: "1/1/18",
+          rating: 1,
+          genre: "Book",
+          bookType: "Paper",
+          duration: 1,
+          awards: null,
+        };
+      },
+    },
+  },
+  data() {
+    const that = this;
+    const {
+      title,
+      author,
+      pageCount,
+      dateRead,
+      rating,
+      genre,
+      bookType,
+      duration,
+      awards,
+    } = that.bookDetails;
+    return {
+      title,
+      author,
+      pageCount,
+      dateRead,
+      rating,
+      genre,
+      bookType,
+      duration,
+      awards,
+    };
+  },
 };
 </script>

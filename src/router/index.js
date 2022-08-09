@@ -25,7 +25,7 @@ const routes = [
     component: BooksView,
   },
   {
-    path: "/2022",
+    path: "/shelf/:year",
     name: "year",
     component: YearView,
   },
