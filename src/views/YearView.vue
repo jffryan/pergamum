@@ -2,7 +2,7 @@
   <div class="grid grid-cols-12 gap-2 pt-20">
     <div class="col-start-2 col-span-5 border border-blue-700">
       <h1 class="text-6xl mb-12">{{ yearInView }}</h1>
-      <quick-links :layout="horizontal" :linkset="yearsLinks" />
+      <quick-links layout="horizontal" :linkset="yearsLinks" />
     </div>
     <div class="col-start-2 col-span-10 border border-red-700">
       <shelf-table :shelf-selection="setShelf" />
@@ -45,7 +45,7 @@ export default {
           path: "/shelf/2018",
           text: "2018",
         },
-      ].reverse(),
+      ],
     };
   },
   computed: {

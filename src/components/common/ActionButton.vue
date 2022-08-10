@@ -16,7 +16,7 @@ export default {
       type: String,
       default: "primary",
       validator(value) {
-        return ["primary", "secondary"].includes(value);
+        return ["primary", "secondary", "accent"].includes(value);
       },
     },
   },
@@ -41,5 +41,9 @@ button {
 
 .secondary {
   @apply text-brand-blue-2 bg-transparent hover:bg-brand-blue-1 hover:text-white;
+}
+
+.accent {
+  @apply bg-brand-red-1 text-white;
 }
 </style>

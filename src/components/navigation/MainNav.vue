@@ -31,7 +31,7 @@
             data-test="login-button"
             button-text="Add book"
             button-type="primary"
-            @click="handleClick('add-book')"
+            @click="handleClick('/add-book')"
           />
         </div>
       </div>
@@ -40,9 +40,7 @@
 </template>
 
 <script>
-import ActionButton from "@/components/buttons/ActionButton.vue";
-// Going to need a better way to do this than importing the entire utils library every time.
-// import utils from "@/utils";
+import ActionButton from "@/components/common/ActionButton.vue";
 
 export default {
   name: "MainNav",
