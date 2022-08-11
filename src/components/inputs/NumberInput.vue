@@ -6,6 +6,7 @@
     :placeholder="placeholder"
     :value="value"
     :inputKey="inputKey"
+    @keypress="isNumber($event)"
     @input="handleInput"
   />
 </template>
@@ -38,9 +39,21 @@ export default {
   },
   emits: ["updateNumberInput"],
   methods: {
-    // @TODO: Add validator method
-    // Emit should run separate, *after* validation.
-    // AKA we shouldn't send bad (non numerical) data back to the form ever. The buck stops here.
+    // Prevents non numerical or (.) from showing up in the visual display
+    isNumber(event) {
+      event = event ? event : window.event;
+      let charCode = event.which ? event.which : event.keyCode;
+      if (
+        charCode > 31 &&
+        (charCode < 48 || charCode > 57) &&
+        charCode !== 46
+      ) {
+        event.preventDefault();
+      } else {
+        return true;
+      }
+    },
+    // Same handler as anyone else
     handleInput(event) {
       const that = this;
       const userInput = event.target.value;
@@ -53,3 +66,14 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+</style>
