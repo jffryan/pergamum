@@ -1,9 +1,9 @@
 <template>
   <div class="grid grid-cols-12 gap-2 pt-20">
-    <div class="col-start-2 col-span-5 border border-blue-700">
+    <div class="col-start-2 col-span-5">
       <h1 class="text-6xl">Add Book</h1>
     </div>
-    <div class="col-start-2 col-span-10 border border-red-700">
+    <div class="col-start-2 col-span-10">
       <add-book-form />
     </div>
   </div>

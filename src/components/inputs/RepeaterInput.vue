@@ -13,11 +13,11 @@
     />
   </div>
   <div class="mt-4 ml-12">
-    <action-button button-text="+" button-type="accent" @click="addInput" />
+    <action-button button-text="+" button-type="primary" @click="addInput" />
     <action-button
       v-if="value.length > 1"
       button-text="-"
-      button-type="primary"
+      button-type="accent"
       class="ml-4"
       @click="removeInput"
     />
