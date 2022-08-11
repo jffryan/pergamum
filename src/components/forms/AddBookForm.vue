@@ -48,7 +48,28 @@
           />
         </div>
       </div>
-      <!-- Listen time -->
+      <!-- Audio length -->
+      <div v-else-if="formData.bookType === 'audio'" class="w-full mb-4">
+        <div class="w-1/2">
+          <time-input
+            input-label="Audio length"
+            input-key="audioLength"
+            placeholder=""
+            :value="formData.audioLength"
+            @update-time-input="updateBasicInput"
+          />
+        </div>
+      </div>
+      <!-- Genres -->
+      <div class="w-full mb-4 flex">
+        <repeater-input
+          input-label="Genres"
+          input-key="genres"
+          placeholder="Enter text"
+          :value="formData.genres"
+          @update-repeater-input="updateRepeaterInput"
+        />
+      </div>
     </div>
   </form>
 </template>
@@ -58,6 +79,7 @@ import DropdownInput from "@/components/inputs/DropdownInput.vue";
 import NumberInput from "@/components/inputs/NumberInput.vue";
 import RepeaterInput from "@/components/inputs/RepeaterInput.vue";
 import TextInput from "@/components/inputs/TextInput.vue";
+import TimeInput from "@/components/inputs/TimeInput.vue";
 
 export default {
   name: "AddBookForm",
@@ -66,6 +88,7 @@ export default {
     NumberInput,
     RepeaterInput,
     TextInput,
+    TimeInput,
   },
   data() {
     return {
@@ -75,6 +98,7 @@ export default {
         pageCount: null,
         bookType: "",
         bookTypes: ["paper", "audio", "pirated", "borrowed"],
+        genres: [""],
       },
     };
   },

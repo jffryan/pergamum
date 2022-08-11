@@ -1,19 +1,34 @@
 <template>
-  <label class="mb-2 block">{{ inputLabel }}</label>
-  <input
-    type="number"
-    class="w-full block text-lg font-normal focus:outline-none border-b border-brand-gray-2 mb-4"
-    :placeholder="placeholder"
-    :value="value"
-    :inputKey="inputKey"
-    @keypress="isNumber($event)"
-    @input="handleInput"
-  />
+  <label class="mb-4 block">{{ inputLabel }}</label>
+  <div class="flex">
+    <input
+      type="number"
+      class="w-14 block text-lg font-normal focus:outline-none border-b border-brand-gray-2 mb-4"
+      :placeholder="placeholder"
+      :value="value"
+      :inputKey="inputKey"
+      @keypress="isNumber($event)"
+      @input="handleInput"
+    />
+    <span class="inline-block mr-8">h</span>
+    <input
+      type="number"
+      class="w-14 block text-lg font-normal focus:outline-none border-b border-brand-gray-2 mb-4"
+      :placeholder="placeholder"
+      :value="value"
+      :inputKey="inputKey"
+      @keypress="isNumber($event)"
+      @input="handleInput"
+    />
+    <span>min</span>
+  </div>
 </template>
 
 <script>
+// @TODO: Separate these inputs into hours/minutes
+// Add toggle between minutes and hour/minute separation?
 export default {
-  name: "NumberInput",
+  name: "TimeInput",
   props: {
     placeholder: {
       type: String,
@@ -33,7 +48,7 @@ export default {
       required: true,
     },
   },
-  emits: ["updateNumberInput"],
+  emits: ["updateTimeInput"],
   methods: {
     // Prevents non numerical or (.) from showing up in the visual display
     isNumber(event) {
@@ -57,7 +72,7 @@ export default {
         userInput,
         inputKey: that.inputKey,
       };
-      that.$emit("updateNumberInput", payload);
+      that.$emit("updateTimeInput", payload);
     },
   },
 };

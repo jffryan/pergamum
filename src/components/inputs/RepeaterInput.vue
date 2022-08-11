@@ -1,6 +1,6 @@
 <template>
   <div class="w-1/2">
-    <label class="mb-2 block">{{ inputLabel }}</label>
+    <label class="mb-4 block">{{ inputLabel }}</label>
     <input
       v-for="(val, i) in value.length"
       :key="i"
