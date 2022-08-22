@@ -29,15 +29,15 @@
         <p>Awards</p>
       </div>
     </div>
-    <div v-for="(book, i) in currentShelf" :key="book.id">
+    <div v-for="(book, i) in shelfSelection" :key="book.id">
       <book-table
         v-if="i % 2 === 0"
-        :book-details="currentShelf[i]"
+        :book-details="shelfSelection[i]"
         class="py-1"
       />
       <book-table
         v-else
-        :book-details="currentShelf[i]"
+        :book-details="shelfSelection[i]"
         class="bg-slate-200 py-1"
       />
     </div>
@@ -55,23 +55,14 @@ export default {
   },
   props: {
     shelfSelection: {
-      type: String,
-      default: "all",
+      type: Array,
+      required: true,
     },
   },
   data() {
     return {
       allBooks,
     };
-  },
-  computed: {
-    currentShelf() {
-      const that = this;
-      // Long term this won't work because it requires every book to be individually categorized into a shelf type
-      // This will make insane amounts of redundant data unless fixed
-      // @TODO: This is now broken with the axios update
-      return that.allBooks["books" + that.shelfSelection];
-    },
   },
 };
 </script>

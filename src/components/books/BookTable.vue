@@ -5,13 +5,15 @@
         <p>{{ title }}</p>
       </div>
       <div>
-        <p>{{ author }}</p>
+        <p v-for="authorName in author" :key="authorName">{{ authorName }}</p>
       </div>
       <div>
         <p>{{ pageCount }}</p>
       </div>
       <div>
-        <p>{{ dateRead }}</p>
+        <p v-if="dateRead.year !== null">
+          {{ dateRead.month }}/{{ dateRead.day }}/{{ dateRead.year }}
+        </p>
       </div>
       <div>
         <p>{{ rating }}</p>
