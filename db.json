@@ -1,0 +1,260 @@
+{
+  "books": [
+    {
+      "title": "Guns, Germs, and Steel",
+      "author": "Jared Diamond",
+      "pageCount": 440,
+      "dateRead": {
+        "month": 1,
+        "day": 2,
+        "year": 2018
+      },
+      "rating": 5,
+      "genre": "History",
+      "bookType": "Paper",
+      "duration": 2,
+      "awards": null,
+      "id": 1
+    },
+    {
+      "title": "How to Win Friends and Influence People",
+      "author": "Dale Carnegie",
+      "pageCount": 288,
+      "dateRead": {
+        "month": 1,
+        "day": 8,
+        "year": 2018
+      },
+      "rating": 5,
+      "genre": "Business",
+      "bookType": "Pirated",
+      "duration": 6,
+      "awards": "2018 Silver Award",
+      "id": 2
+    },
+    {
+      "title": "Lolita",
+      "author": "Vladimir Nabokov",
+      "pageCount": 317,
+      "dateRead": {
+        "month": 1,
+        "day": 12,
+        "year": 2018
+      },
+      "rating": 4.5,
+      "genre": "Fiction",
+      "bookType": "Paper",
+      "duration": 4,
+      "awards": null,
+      "id": 3
+    },
+    {
+      "title": "What Every Body Is Saying",
+      "author": "Joe Navarro",
+      "pageCount": 234,
+      "dateRead": {
+        "month": 1,
+        "day": 17,
+        "year": 2018
+      },
+      "rating": 4.5,
+      "genre": "Business",
+      "bookType": "Paper",
+      "duration": 5,
+      "awards": null,
+      "id": 4
+    },
+    {
+      "title": "A Glorious Defeat",
+      "author": "Timothy Henderson",
+      "pageCount": 216,
+      "dateRead": {
+        "month": 3,
+        "day": 4,
+        "year": 2019
+      },
+      "rating": 5,
+      "genre": "Latin America",
+      "bookType": "Paper",
+      "duration": 62,
+      "awards": null,
+      "id": 5
+    },
+    {
+      "title": "The General In His Labyrinth",
+      "author": "Gabriel Garcia Marquez",
+      "pageCount": 285,
+      "dateRead": {
+        "month": 3,
+        "day": 7,
+        "year": 2019
+      },
+      "rating": 3.5,
+      "genre": "Latin America",
+      "bookType": "Paper",
+      "duration": 3,
+      "awards": null,
+      "id": 6
+    },
+    {
+      "title": "Guerrilla Warfare",
+      "author": "Che Guevara",
+      "pageCount": 157,
+      "dateRead": {
+        "month": 3,
+        "day": 27,
+        "year": 2019
+      },
+      "rating": 4.5,
+      "genre": "Latin America",
+      "bookType": "Paper",
+      "duration": 20,
+      "awards": null,
+      "id": 7
+    },
+    {
+      "title": "The Rich and the Rest of Us",
+      "author": "Tavis Smiley",
+      "pageCount": 222,
+      "dateRead": {
+        "month": 2,
+        "day": 5,
+        "year": 2020
+      },
+      "rating": 3,
+      "genre": "Theory",
+      "bookType": "Paper",
+      "duration": 39,
+      "awards": null,
+      "id": 8
+    },
+    {
+      "title": "Where We Go From Here",
+      "author": "Bernie Sanders",
+      "pageCount": 270,
+      "dateRead": {
+        "month": 2,
+        "day": 23,
+        "year": 2020
+      },
+      "rating": 4,
+      "genre": "Memoir",
+      "bookType": "Paper",
+      "duration": 18,
+      "awards": null,
+      "id": 9
+    },
+    {
+      "title": "Station Eleven",
+      "author": "Emily St. John Mandel",
+      "pageCount": 333,
+      "dateRead": {
+        "month": 3,
+        "day": 5,
+        "year": 2020
+      },
+      "rating": 5,
+      "genre": "Fiction",
+      "bookType": "Borrowed",
+      "duration": 11,
+      "awards": null,
+      "id": 10
+    },
+    {
+      "title": "The Power and the Glory",
+      "author": "Graham Greene",
+      "pageCount": 222,
+      "dateRead": {
+        "month": 1,
+        "day": 5,
+        "year": 2021
+      },
+      "rating": 5,
+      "genre": "Fiction",
+      "bookType": "Paper",
+      "duration": 5,
+      "awards": null,
+      "id": 11
+    },
+    {
+      "title": "Empire",
+      "author": "Stephen Howe",
+      "pageCount": 168,
+      "dateRead": {
+        "month": 1,
+        "day": 7,
+        "year": 2021
+      },
+      "rating": 4,
+      "genre": "Theory",
+      "bookType": "Pirated",
+      "duration": 2,
+      "awards": null,
+      "id": 12
+    },
+    {
+      "title": "How To Watch TV News",
+      "author": "Neil Postman",
+      "pageCount": 192,
+      "dateRead": {
+        "month": 1,
+        "day": 19,
+        "year": 2021
+      },
+      "rating": 5,
+      "genre": "Theory",
+      "bookType": "Audio",
+      "duration": 12,
+      "awards": null,
+      "id": 13
+    },
+    {
+      "title": "Remina",
+      "author": "Junji Ito",
+      "pageCount": 250,
+      "dateRead": {
+        "month": 1,
+        "day": 5,
+        "year": 2022
+      },
+      "rating": 3.5,
+      "genre": "Horror",
+      "bookType": "Paper",
+      "duration": 8,
+      "awards": null,
+      "id": 14
+    },
+    {
+      "title": "The Money Game",
+      "author": "Adam Smith",
+      "pageCount": 272,
+      "dateRead": {
+        "month": 1,
+        "day": 8,
+        "year": 2022
+      },
+      "rating": 5,
+      "genre": "Business",
+      "bookType": "Pirated",
+      "duration": 3,
+      "awards": null,
+      "id": 15
+    },
+    {
+      "title": "The Communist Manifesto",
+      "author": "Karl Marx, Friedrich Engels",
+      "pageCount": 160,
+      "dateRead": {
+        "month": 1,
+        "day": 15,
+        "year": 2022
+      },
+      "rating": 5,
+      "genre": "Theory",
+      "bookType": "Paper",
+      "duration": 7,
+      "awards": null,
+      "id": 16
+    }
+  ]
+}
