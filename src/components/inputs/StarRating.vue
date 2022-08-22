@@ -1,21 +1,57 @@
 <template>
-  <label class="mb-4 block" @click="devTest">{{ inputLabel }}</label>
-  <div ref="ratingParent" class="grid grid-cols-5">
-    <div
-      v-for="num in 5"
-      :key="num"
-      ref="ratingContainer"
-      @mouseover="trackMouse"
-    >
-      <font-awesome-icon :icon="['fas', 'star']" class="text-3xl" />
-      <font-awesome-icon :icon="['fas', 'star-half']" class="text-3xl" />
+  <div>
+    <label class="mb-4 block" @click="devTest">{{ inputLabel }}</label>
+    <div class="flex flex-row flex-nowrap">
+      <div ref="ratingParent" class="grid grid-cols-5 w-1/2">
+        <div
+          v-for="num in 5"
+          :key="num"
+          ref="ratingContainer"
+          class="fa-stack fa-1x"
+          :inputKey="inputKey"
+          @click="handleInput(num)"
+        >
+          <div v-if="num <= value">
+            <font-awesome-icon
+              :icon="['fas', 'star']"
+              class="font-xl fa-stack-2x text-brand-yellow-1"
+            />
+            <font-awesome-icon
+              :icon="['fas', 'star']"
+              class="font-xl fa-stack-1x text-brand-yellow-1"
+            />
+          </div>
+          <div v-else-if="num > value && num <= 5">
+            <font-awesome-icon
+              :icon="['fas', 'star']"
+              class="font-xl fa-stack-2x"
+            />
+            <font-awesome-icon
+              :icon="['fas', 'star']"
+              class="font-xl fa-stack-1x fa-inverse"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="ml-12">
+        <action-button
+          button-text="No rating"
+          button-type="secondary"
+          @click.prevent="resetRating"
+        />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+// @TODO: Implement half stars both visually and in the code
+import ActionButton from "@/components/common/ActionButton.vue";
 export default {
   name: "StarRating",
+  components: {
+    ActionButton,
+  },
   props: {
     placeholder: {
       type: String,
@@ -36,36 +72,24 @@ export default {
     },
   },
   emits: ["updateRatingInput"],
-  computed: {
-    ratingParentWidth() {
-      const that = this;
-      return that.$refs.ratingParent.scrollWidth;
-    },
-    ratingParentLocationLeft() {
-      const that = this;
-      return that.$refs.ratingParent.offsetLeft;
-    },
-  },
+  computed: {},
   methods: {
-    handleInput(event) {
+    handleInput(num) {
       const that = this;
-      const userInput = event.target.value;
+      const userInput = num;
       const payload = {
         userInput,
         inputKey: that.inputKey,
       };
       that.$emit("updateRatingInput", payload);
     },
-    trackMouse(event) {
-      const userInput = event.clientX;
-      console.log(userInput);
-    },
-    devTest() {
+    resetRating() {
       const that = this;
-      console.log(
-        "Width: " + that.ratingParentWidth,
-        "Left: " + that.ratingParentLocationLeft
-      );
+      const payload = {
+        userInput: null,
+        inputKey: that.inputKey,
+      };
+      that.$emit("updateRatingInput", payload);
     },
   },
 };

@@ -14,6 +14,7 @@ module.exports = {
         "brand-blue-1": "#2C8C99",
         "brand-blue-2": "#326771",
         "brand-red-1": "#931621",
+        "brand-yellow-1": "#F0DE3A",
       },
       boxShadow: {
         blue: "0 3px 15px #326771",

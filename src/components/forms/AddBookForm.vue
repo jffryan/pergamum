@@ -131,8 +131,8 @@ export default {
     },
     updateRatingInput(payload) {
       const that = this;
-      const { inputKey, userInput, index } = payload;
-      that.formData[inputKey][index] = userInput;
+      const { inputKey, userInput } = payload;
+      that.formData[inputKey] = userInput;
     },
   },
 };
