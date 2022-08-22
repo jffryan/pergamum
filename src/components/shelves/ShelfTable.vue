@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="grid grid-cols-10 bg-slate-400 py-2">
-      <div class="col-span-2">
+      <div class="col-span-2 pl-2">
         <p>Title</p>
       </div>
       <div>

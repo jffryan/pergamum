@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="grid grid-cols-10">
-      <div class="col-span-2">
+      <div class="col-span-2 pl-2">
         <p>{{ title }}</p>
       </div>
       <div>

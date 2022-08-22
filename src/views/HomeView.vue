@@ -1,9 +1,9 @@
 <template>
   <div class="grid grid-cols-12 gap-2 pt-20">
-    <div class="col-start-2 col-span-5 border border-blue-700">
+    <div class="col-start-2 col-span-5">
       <h1 class="text-6xl mb-12">Home</h1>
     </div>
-    <div class="col-start-2 col-span-10 border border-red-700">
+    <div class="col-start-2 col-span-10">
       <h2 class="text-4xl mb-8">Links</h2>
       <div class="grid grid-cols-4 gap-x-2">
         <quick-links
