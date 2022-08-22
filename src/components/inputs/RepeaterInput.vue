@@ -72,7 +72,7 @@ export default {
       event.preventDefault();
       const that = this;
       const wrapper = that.value;
-      wrapper.pop("");
+      wrapper.pop();
     },
   },
 };

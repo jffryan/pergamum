@@ -7,7 +7,7 @@
           <text-input
             input-label="Title"
             input-key="title"
-            placeholder="Enter title"
+            placeholder=""
             :value="formData.title"
             @update-text-input="updateBasicInput"
           />
@@ -18,7 +18,7 @@
         <repeater-input
           input-label="Author"
           input-key="author"
-          placeholder="Author name"
+          placeholder=""
           :value="formData.author"
           @update-repeater-input="updateRepeaterInput"
         />
@@ -29,7 +29,7 @@
           <dropdown-input
             input-label="Type"
             input-key="bookType"
-            placeholder="--"
+            placeholder=""
             :value="formData.bookType"
             :option-set="formData.bookTypes"
             @update-dropdown-input="updateBasicInput"
@@ -42,7 +42,7 @@
           <number-input
             input-label="Page Count"
             input-key="pageCount"
-            placeholder="Length"
+            placeholder=""
             :value="formData.pageCount"
             @update-number-input="updateBasicInput"
           />
@@ -65,10 +65,22 @@
         <repeater-input
           input-label="Genres"
           input-key="genres"
-          placeholder="Enter text"
+          placeholder=""
           :value="formData.genres"
           @update-repeater-input="updateRepeaterInput"
         />
+      </div>
+      <!-- Star Rating -->
+      <div class="w-full mb-4 flex">
+        <div class="w-1/2">
+          <star-rating
+            input-label="Rating"
+            input-key="rating"
+            placeholder=""
+            :value="formData.rating"
+            @update-rating-input="updateRatingInput"
+          />
+        </div>
       </div>
     </div>
   </form>
@@ -78,6 +90,7 @@
 import DropdownInput from "@/components/inputs/DropdownInput.vue";
 import NumberInput from "@/components/inputs/NumberInput.vue";
 import RepeaterInput from "@/components/inputs/RepeaterInput.vue";
+import StarRating from "@/components/inputs/StarRating.vue";
 import TextInput from "@/components/inputs/TextInput.vue";
 import TimeInput from "@/components/inputs/TimeInput.vue";
 
@@ -87,6 +100,7 @@ export default {
     DropdownInput,
     NumberInput,
     RepeaterInput,
+    StarRating,
     TextInput,
     TimeInput,
   },
@@ -99,6 +113,7 @@ export default {
         bookType: "",
         bookTypes: ["paper", "audio", "pirated", "borrowed"],
         genres: [""],
+        rating: null,
       },
     };
   },
@@ -110,6 +125,11 @@ export default {
       that.formData[inputKey] = userInput;
     },
     updateRepeaterInput(payload) {
+      const that = this;
+      const { inputKey, userInput, index } = payload;
+      that.formData[inputKey][index] = userInput;
+    },
+    updateRatingInput(payload) {
       const that = this;
       const { inputKey, userInput, index } = payload;
       that.formData[inputKey][index] = userInput;
