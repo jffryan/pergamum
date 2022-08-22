@@ -69,6 +69,7 @@ export default {
       const that = this;
       // Long term this won't work because it requires every book to be individually categorized into a shelf type
       // This will make insane amounts of redundant data unless fixed
+      // @TODO: This is now broken with the axios update
       return that.allBooks["books" + that.shelfSelection];
     },
   },

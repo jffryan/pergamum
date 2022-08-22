@@ -2,7 +2,9 @@
   "books": [
     {
       "title": "Guns, Germs, and Steel",
-      "author": "Jared Diamond",
+      "author": [
+        "Jared Diamond"
+      ],
       "pageCount": 440,
       "dateRead": {
         "month": 1,
@@ -18,7 +20,9 @@
     },
     {
       "title": "How to Win Friends and Influence People",
-      "author": "Dale Carnegie",
+      "author": [
+        "Dale Carnegie"
+      ],
       "pageCount": 288,
       "dateRead": {
         "month": 1,
@@ -34,7 +38,9 @@
     },
     {
       "title": "Lolita",
-      "author": "Vladimir Nabokov",
+      "author": [
+        "Vladimir Nabokov"
+      ],
       "pageCount": 317,
       "dateRead": {
         "month": 1,
@@ -50,7 +56,9 @@
     },
     {
       "title": "What Every Body Is Saying",
-      "author": "Joe Navarro",
+      "author": [
+        "Joe Navarro"
+      ],
       "pageCount": 234,
       "dateRead": {
         "month": 1,
@@ -66,7 +74,9 @@
     },
     {
       "title": "A Glorious Defeat",
-      "author": "Timothy Henderson",
+      "author": [
+        "Timothy Henderson"
+      ],
       "pageCount": 216,
       "dateRead": {
         "month": 3,
@@ -82,7 +92,9 @@
     },
     {
       "title": "The General In His Labyrinth",
-      "author": "Gabriel Garcia Marquez",
+      "author": [
+        "Gabriel Garcia Marquez"
+      ],
       "pageCount": 285,
       "dateRead": {
         "month": 3,
@@ -98,7 +110,9 @@
     },
     {
       "title": "Guerrilla Warfare",
-      "author": "Che Guevara",
+      "author": [
+        "Che Guevara"
+      ],
       "pageCount": 157,
       "dateRead": {
         "month": 3,
@@ -114,7 +128,10 @@
     },
     {
       "title": "The Rich and the Rest of Us",
-      "author": "Tavis Smiley",
+      "author": [
+        "Tavis Smiley",
+        "Cornel West"
+      ],
       "pageCount": 222,
       "dateRead": {
         "month": 2,
@@ -130,7 +147,9 @@
     },
     {
       "title": "Where We Go From Here",
-      "author": "Bernie Sanders",
+      "author": [
+        "Bernie Sanders"
+      ],
       "pageCount": 270,
       "dateRead": {
         "month": 2,
@@ -146,7 +165,9 @@
     },
     {
       "title": "Station Eleven",
-      "author": "Emily St. John Mandel",
+      "author": [
+        "Emily St. John Mandel"
+      ],
       "pageCount": 333,
       "dateRead": {
         "month": 3,
@@ -162,7 +183,9 @@
     },
     {
       "title": "The Power and the Glory",
-      "author": "Graham Greene",
+      "author": [
+        "Graham Greene"
+      ],
       "pageCount": 222,
       "dateRead": {
         "month": 1,
@@ -178,7 +201,9 @@
     },
     {
       "title": "Empire",
-      "author": "Stephen Howe",
+      "author": [
+        "Stephen Howe"
+      ],
       "pageCount": 168,
       "dateRead": {
         "month": 1,
@@ -194,7 +219,9 @@
     },
     {
       "title": "How To Watch TV News",
-      "author": "Neil Postman",
+      "author": [
+        "Neil Postman"
+      ],
       "pageCount": 192,
       "dateRead": {
         "month": 1,
@@ -210,7 +237,9 @@
     },
     {
       "title": "Remina",
-      "author": "Junji Ito",
+      "author": [
+        "Junji Ito"
+      ],
       "pageCount": 250,
       "dateRead": {
         "month": 1,
@@ -226,7 +255,9 @@
     },
     {
       "title": "The Money Game",
-      "author": "Adam Smith",
+      "author": [
+        "Adam Smith"
+      ],
       "pageCount": 272,
       "dateRead": {
         "month": 1,
@@ -242,7 +273,10 @@
     },
     {
       "title": "The Communist Manifesto",
-      "author": "Karl Marx, Friedrich Engels",
+      "author": [
+        "Karl Marx",
+        "Friedrich Engels"
+      ],
       "pageCount": 160,
       "dateRead": {
         "month": 1,
@@ -255,6 +289,60 @@
       "duration": 7,
       "awards": null,
       "id": 16
+    },
+    {
+      "title": "The God of Small Things",
+      "author": [
+        "Arundhati Roy"
+      ],
+      "pageCount": 333,
+      "dateRead": {
+        "month": null,
+        "day": null,
+        "year": null
+      },
+      "rating": null,
+      "genre": "Fiction",
+      "bookType": "Paper",
+      "duration": null,
+      "awards": null,
+      "id": 17
+    },
+    {
+      "title": "The Fifties",
+      "author": [
+        "David Halberstam"
+      ],
+      "pageCount": 733,
+      "dateRead": {
+        "month": null,
+        "day": null,
+        "year": null
+      },
+      "rating": null,
+      "genre": "History",
+      "bookType": "Paper",
+      "duration": null,
+      "awards": null,
+      "id": 18
+    },
+    {
+      "title": "The Powers That Be",
+      "author": [
+        "David Halberstam"
+      ],
+      "pageCount": 1071,
+      "dateRead": {
+        "month": null,
+        "day": null,
+        "year": null
+      },
+      "rating": null,
+      "genre": "History",
+      "bookType": "Paper",
+      "duration": null,
+      "awards": null,
+      "id": 19
     }
   ]
 }
