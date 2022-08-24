@@ -12,7 +12,11 @@
         "year": 2018
       },
       "rating": 5,
-      "genre": "History",
+      "genre": [
+        "History",
+        "Anthropology",
+        "Geography"
+      ],
       "bookType": "Paper",
       "duration": 2,
       "awards": null,
@@ -30,7 +34,11 @@
         "year": 2018
       },
       "rating": 5,
-      "genre": "Business",
+      "genre": [
+        "Business",
+        "Psychology",
+        "Self-Help"
+      ],
       "bookType": "Pirated",
       "duration": 6,
       "awards": "2018 Silver Award",
@@ -48,7 +56,10 @@
         "year": 2018
       },
       "rating": 4.5,
-      "genre": "Fiction",
+      "genre": [
+        "Fiction",
+        "Russia Fiction"
+      ],
       "bookType": "Paper",
       "duration": 4,
       "awards": null,
@@ -66,7 +77,10 @@
         "year": 2018
       },
       "rating": 4.5,
-      "genre": "Business",
+      "genre": [
+        "Business",
+        "Psychology"
+      ],
       "bookType": "Paper",
       "duration": 5,
       "awards": null,
@@ -84,7 +98,10 @@
         "year": 2019
       },
       "rating": 5,
-      "genre": "Latin America",
+      "genre": [
+        "Latin America",
+        "History"
+      ],
       "bookType": "Paper",
       "duration": 62,
       "awards": null,
@@ -102,7 +119,9 @@
         "year": 2019
       },
       "rating": 3.5,
-      "genre": "Latin America",
+      "genre": [
+        "Latin America"
+      ],
       "bookType": "Paper",
       "duration": 3,
       "awards": null,
@@ -120,7 +139,9 @@
         "year": 2019
       },
       "rating": 4.5,
-      "genre": "Latin America",
+      "genre": [
+        "Latin America"
+      ],
       "bookType": "Paper",
       "duration": 20,
       "awards": null,
@@ -139,7 +160,9 @@
         "year": 2020
       },
       "rating": 3,
-      "genre": "Theory",
+      "genre": [
+        "Theory"
+      ],
       "bookType": "Paper",
       "duration": 39,
       "awards": null,
@@ -157,7 +180,9 @@
         "year": 2020
       },
       "rating": 4,
-      "genre": "Memoir",
+      "genre": [
+        "Memoir"
+      ],
       "bookType": "Paper",
       "duration": 18,
       "awards": null,
@@ -175,7 +200,9 @@
         "year": 2020
       },
       "rating": 5,
-      "genre": "Fiction",
+      "genre": [
+        "Fiction"
+      ],
       "bookType": "Borrowed",
       "duration": 11,
       "awards": null,
@@ -193,7 +220,9 @@
         "year": 2021
       },
       "rating": 5,
-      "genre": "Fiction",
+      "genre": [
+        "Fiction"
+      ],
       "bookType": "Paper",
       "duration": 5,
       "awards": null,
@@ -211,7 +240,9 @@
         "year": 2021
       },
       "rating": 4,
-      "genre": "Theory",
+      "genre": [
+        "Theory"
+      ],
       "bookType": "Pirated",
       "duration": 2,
       "awards": null,
@@ -229,7 +260,9 @@
         "year": 2021
       },
       "rating": 5,
-      "genre": "Theory",
+      "genre": [
+        "Theory"
+      ],
       "bookType": "Audio",
       "duration": 12,
       "awards": null,
@@ -247,7 +280,9 @@
         "year": 2022
       },
       "rating": 3.5,
-      "genre": "Horror",
+      "genre": [
+        "Horror"
+      ],
       "bookType": "Paper",
       "duration": 8,
       "awards": null,
@@ -265,7 +300,9 @@
         "year": 2022
       },
       "rating": 5,
-      "genre": "Business",
+      "genre": [
+        "Business"
+      ],
       "bookType": "Pirated",
       "duration": 3,
       "awards": null,
@@ -284,7 +321,9 @@
         "year": 2022
       },
       "rating": 5,
-      "genre": "Theory",
+      "genre": [
+        "Theory"
+      ],
       "bookType": "Paper",
       "duration": 7,
       "awards": null,
@@ -302,7 +341,9 @@
         "year": null
       },
       "rating": null,
-      "genre": "Fiction",
+      "genre": [
+        "Fiction"
+      ],
       "bookType": "Paper",
       "duration": null,
       "awards": null,
@@ -320,7 +361,9 @@
         "year": null
       },
       "rating": null,
-      "genre": "History",
+      "genre": [
+        "History"
+      ],
       "bookType": "Paper",
       "duration": null,
       "awards": null,
@@ -338,7 +381,9 @@
         "year": null
       },
       "rating": null,
-      "genre": "History",
+      "genre": [
+        "History"
+      ],
       "bookType": "Paper",
       "duration": null,
       "awards": null,

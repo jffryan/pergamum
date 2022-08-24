@@ -19,7 +19,7 @@
         <p>{{ rating }}</p>
       </div>
       <div>
-        <p>{{ genre }}</p>
+        <p v-for="cat in genre" :key="cat">{{ cat }}</p>
       </div>
       <div>
         <p>{{ bookType }}</p>
