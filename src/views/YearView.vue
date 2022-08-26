@@ -17,8 +17,7 @@ import QuickLinks from "@/components/navigation/QuickLinks.vue";
 import ShelfTable from "@/components/shelves/ShelfTable.vue";
 
 import quickLinksConfig from "@/utils/quickLinksConfig.js";
-const { years } = quickLinksConfig;
-const { yearsLinks } = years;
+const { years: yearsMenu } = quickLinksConfig;
 
 export default {
   name: "YearView",
@@ -30,7 +29,7 @@ export default {
   data() {
     return {
       yearsLinks: [
-        ...yearsLinks,
+        ...yearsMenu.links,
         {
           path: "/shelf/unfinished",
           text: "Unfinished",

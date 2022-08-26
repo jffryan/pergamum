@@ -29,8 +29,7 @@
 import BasicHero from "@/components/layouts/BasicHero.vue";
 import QuickLinks from "@/components/navigation/QuickLinks.vue";
 
-// Quicklinks config settings from utils
-// @TODO: Is this the best implementation? Idk if it should live here but it's interesting to me.
+// @TODO: This is clean for now but should it live in each view as it's called?
 import quickLinksConfig from "@/utils/quickLinksConfig.js";
 const {
   books: booksMenu,
