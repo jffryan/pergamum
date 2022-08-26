@@ -6,18 +6,18 @@
       <div class="grid grid-cols-4 gap-x-2">
         <quick-links
           layout="vertical"
-          :linkset="booksLinks"
-          :menu-title="booksTitle"
+          :linkset="booksMenu.links"
+          :menu-title="booksMenu.title"
         />
         <quick-links
           layout="vertical"
-          :linkset="yearsLinks"
-          :menu-title="yearsTitle"
+          :linkset="yearsMenu.links"
+          :menu-title="yearsMenu.title"
         />
         <quick-links
           layout="vertical"
-          :linkset="archiveLinks"
-          :menu-title="archiveTitle"
+          :linkset="archiveMenu.links"
+          :menu-title="archiveMenu.title"
         />
       </div>
     </div>
@@ -29,6 +29,15 @@
 import BasicHero from "@/components/layouts/BasicHero.vue";
 import QuickLinks from "@/components/navigation/QuickLinks.vue";
 
+// Quicklinks config settings from utils
+// @TODO: Is this the best implementation? Idk if it should live here but it's interesting to me.
+import quickLinksConfig from "@/utils/quickLinksConfig.js";
+const {
+  books: booksMenu,
+  years: yearsMenu,
+  archive: archiveMenu,
+} = quickLinksConfig;
+
 export default {
   name: "HomeView",
   components: {
@@ -37,74 +46,9 @@ export default {
   },
   data() {
     return {
-      booksLinks: [
-        {
-          name: "books",
-          text: "All books",
-        },
-        {
-          name: "books",
-          text: "Paper books",
-        },
-        {
-          name: "books",
-          text: "Pirated books",
-        },
-        {
-          name: "books",
-          text: "Audio books",
-        },
-      ],
-      booksTitle: "Books",
-      yearsLinks: [
-        {
-          name: "year",
-          params: {
-            year: "2022",
-          },
-          text: "2022",
-        },
-        {
-          name: "year",
-          params: {
-            year: "2021",
-          },
-          text: "2021",
-        },
-        {
-          name: "year",
-          params: {
-            year: "2020",
-          },
-          text: "2020",
-        },
-        {
-          name: "year",
-          params: {
-            year: "2019",
-          },
-          text: "2019",
-        },
-        {
-          name: "year",
-          params: {
-            year: "2018",
-          },
-          text: "2018",
-        },
-      ],
-      yearsTitle: "Years",
-      archiveLinks: [
-        {
-          name: "archive",
-          text: "Archive",
-        },
-        {
-          name: "archive",
-          text: "Notes",
-        },
-      ],
-      archiveTitle: "Archive",
+      booksMenu,
+      yearsMenu,
+      archiveMenu,
     };
   },
 };

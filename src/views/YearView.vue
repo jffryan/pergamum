@@ -16,6 +16,10 @@ import BasicHero from "@/components/layouts/BasicHero.vue";
 import QuickLinks from "@/components/navigation/QuickLinks.vue";
 import ShelfTable from "@/components/shelves/ShelfTable.vue";
 
+import quickLinksConfig from "@/utils/quickLinksConfig.js";
+const { years } = quickLinksConfig;
+const { yearsLinks } = years;
+
 export default {
   name: "YearView",
   components: {
@@ -25,28 +29,8 @@ export default {
   },
   data() {
     return {
-      // @TODO: Observing that this has now been repeated twice. Need a better way to do it.
       yearsLinks: [
-        {
-          path: "/shelf/2022",
-          text: "2022",
-        },
-        {
-          path: "/shelf/2021",
-          text: "2021",
-        },
-        {
-          path: "/shelf/2020",
-          text: "2020",
-        },
-        {
-          path: "/shelf/2019",
-          text: "2019",
-        },
-        {
-          path: "/shelf/2018",
-          text: "2018",
-        },
+        ...yearsLinks,
         {
           path: "/shelf/unfinished",
           text: "Unfinished",
