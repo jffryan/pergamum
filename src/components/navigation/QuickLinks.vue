@@ -9,9 +9,11 @@
     <nav>
       <ul :class="menuClass">
         <li v-for="link in linkset" :key="link.text" class="mb-1 list-item">
-          <router-link :to="link.path" class="list-link">{{
-            link.text
-          }}</router-link>
+          <router-link
+            :to="{ name: link.name, params: link.params }"
+            class="list-link"
+            >{{ link.text }}</router-link
+          >
         </li>
       </ul>
     </nav>
@@ -26,7 +28,7 @@ export default {
       type: Object,
       default() {
         return {
-          path: "/",
+          name: "/",
           text: "Home",
         };
       },

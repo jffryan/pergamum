@@ -39,53 +39,68 @@ export default {
     return {
       booksLinks: [
         {
-          path: "/books",
+          name: "books",
           text: "All books",
         },
         {
-          path: "/books",
+          name: "books",
           text: "Paper books",
         },
         {
-          path: "/books",
+          name: "books",
           text: "Pirated books",
         },
         {
-          path: "/books",
+          name: "books",
           text: "Audio books",
         },
       ],
       booksTitle: "Books",
       yearsLinks: [
         {
-          path: "/shelf/2022",
+          name: "year",
+          params: {
+            year: "2022",
+          },
           text: "2022",
         },
         {
-          path: "/shelf/2021",
+          name: "year",
+          params: {
+            year: "2021",
+          },
           text: "2021",
         },
         {
-          path: "/shelf/2020",
+          name: "year",
+          params: {
+            year: "2020",
+          },
           text: "2020",
         },
         {
-          path: "/shelf/2019",
+          name: "year",
+          params: {
+            year: "2019",
+          },
           text: "2019",
         },
         {
-          path: "/shelf/2018",
+          name: "year",
+          params: {
+            year: "2018",
+          },
           text: "2018",
         },
       ],
       yearsTitle: "Years",
       archiveLinks: [
         {
-          path: "/archive",
+          name: "archive",
           text: "Archive",
         },
         {
-          path: "/archive",
+          name: "archive",
           text: "Notes",
         },
       ],
