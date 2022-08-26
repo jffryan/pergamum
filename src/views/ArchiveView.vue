@@ -1,14 +1,16 @@
 <template>
   <div class="grid grid-cols-12 gap-2 pt-20">
-    <div class="col-start-2 col-span-5 border border-blue-700">
-      <h1 class="text-6xl">Archive</h1>
-    </div>
+    <basic-hero title="Archive" />
   </div>
 </template>
 
 <script>
 // @todo: This should list past years + other miscellaneous subnavigation (best of lists? etc)
+import BasicHero from "@/components/layouts/BasicHero.vue";
 export default {
   name: "ArchiveView",
+  components: {
+    BasicHero,
+  },
 };
 </script>

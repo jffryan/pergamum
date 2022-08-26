@@ -17,7 +17,19 @@
         <div>
           <h4 class="mb-2 text-l">Details:</h4>
           <ul class="pl-8 list-disc">
-            <li>{{ book.genre }}</li>
+            <li>
+              <router-link
+                v-for="(cat, i) in book.genre"
+                :key="cat"
+                :to="{
+                  name: 'genreView',
+                  params: { genre: cat.toLowerCase() },
+                }"
+              >
+                <span v-if="i < book.genre.length - 1">{{ cat }},&nbsp;</span>
+                <span v-else>{{ cat }}</span>
+              </router-link>
+            </li>
             <li>{{ book.pageCount }} pages</li>
             <li v-if="book.dateRead.year !== null">
               Finished on: {{ book.dateRead.month }}/{{ book.dateRead.day }}/{{

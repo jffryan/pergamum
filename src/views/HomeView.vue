@@ -1,8 +1,6 @@
 <template>
   <div class="grid grid-cols-12 gap-2 pt-20">
-    <div class="col-start-2 col-span-5">
-      <h1 class="text-6xl mb-12">Home</h1>
-    </div>
+    <basic-hero title="Pergamum" />
     <div class="col-start-2 col-span-10">
       <h2 class="text-4xl mb-8">Links</h2>
       <div class="grid grid-cols-4 gap-x-2">
@@ -28,11 +26,13 @@
 
 <script>
 // @todo: figure out what should go on the home section
+import BasicHero from "@/components/layouts/BasicHero.vue";
 import QuickLinks from "@/components/navigation/QuickLinks.vue";
 
 export default {
   name: "HomeView",
   components: {
+    BasicHero,
     QuickLinks,
   },
   data() {
@@ -87,10 +87,6 @@ export default {
         {
           path: "/archive",
           text: "Notes",
-        },
-        {
-          text: "Best of",
-          path: "/best-of",
         },
       ],
       archiveTitle: "Archive",

@@ -1,8 +1,6 @@
 <template>
   <div class="grid grid-cols-12 gap-2 pt-20">
-    <div class="col-start-2 col-span-5">
-      <h1 class="text-6xl mb-12 capitalize">{{ yearInView }}</h1>
-    </div>
+    <basic-hero :title="yearInView" />
     <div class="col-start-2 col-span-10">
       <quick-links layout="horizontal" :linkset="yearsLinks" />
       <shelf-table :shelf-selection="setShelf" />
@@ -14,14 +12,16 @@
 import axios from "axios";
 
 // @Todo: Make this page have dynamic imports to pull the proper shelf table data
-import ShelfTable from "@/components/shelves/ShelfTable.vue";
+import BasicHero from "@/components/layouts/BasicHero.vue";
 import QuickLinks from "@/components/navigation/QuickLinks.vue";
+import ShelfTable from "@/components/shelves/ShelfTable.vue";
 
 export default {
   name: "YearView",
   components: {
-    ShelfTable,
+    BasicHero,
     QuickLinks,
+    ShelfTable,
   },
   data() {
     return {

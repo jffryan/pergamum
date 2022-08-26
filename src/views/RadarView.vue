@@ -1,7 +1,7 @@
 <template>
   <div class="grid grid-cols-12 gap-2 pt-20">
-    <div class="col-start-2 col-span-5 border border-blue-700">
-      <h1 class="text-6xl mb-8">Books on my radar</h1>
+    <basic-hero title="On my radar" />
+    <div class="col-start-2 col-span-5">
       <p>
         Meaning, books that I'm curious about but haven't found or purchased.
       </p>
@@ -11,7 +11,11 @@
 
 <script>
 // @todo: Basically a Books view but for books I haven't purchased yet. Probably redundant.
+import BasicHero from "@/components/layouts/BasicHero.vue";
 export default {
   name: "RadarView",
+  components: {
+    BasicHero,
+  },
 };
 </script>

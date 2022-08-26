@@ -1,15 +1,15 @@
 import { createRouter, createWebHistory } from "vue-router";
 // @todo: Figure out a less manual way to do all this
 // This is also a ton of boilerplate
-import HomeView from "@/views/HomeView.vue";
-import BooksView from "@/views/BooksView.vue";
-import YearView from "@/views/YearView.vue";
-import ArchiveView from "@/views/ArchiveView.vue";
-import StatsView from "@/views/StatsView.vue";
-import ReadingListView from "@/views/ReadingListView.vue";
-import BestOfView from "@/views/BestOfView.vue";
-import RadarView from "@/views/RadarView.vue";
-import AddBookView from "@/views/AddBookView.vue";
+const HomeView = () => import("@/views/HomeView.vue");
+const BooksView = () => import("@/views/BooksView.vue");
+const YearView = () => import("@/views/YearView.vue");
+const ArchiveView = () => import("@/views/ArchiveView.vue");
+const StatsView = () => import("@/views/StatsView.vue");
+const ReadingListView = () => import("@/views/ReadingListView.vue");
+const RadarView = () => import("@/views/RadarView.vue");
+const AddBookView = () => import("@/views/AddBookView.vue");
+const GenreView = () => import("@/views/GenreView.vue");
 
 // @todo: error handling? 404?
 
@@ -45,11 +45,6 @@ const routes = [
     component: ReadingListView,
   },
   {
-    path: "/best-of",
-    name: "bestOf",
-    component: BestOfView,
-  },
-  {
     path: "/radar",
     name: "radar",
     component: RadarView,
@@ -58,6 +53,11 @@ const routes = [
     path: "/add-book",
     name: "addBook",
     component: AddBookView,
+  },
+  {
+    path: "/genres/:genre",
+    name: "genreView",
+    component: GenreView,
   },
 ];
 

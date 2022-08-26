@@ -1,5 +1,5 @@
 <template>
-  <form class="flex items-center w-full mt-14">
+  <form class="flex items-center w-full">
     <div class="w-full h-full text-base font-light">
       <!-- Title -->
       <div class="w-full mb-4">
