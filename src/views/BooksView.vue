@@ -9,14 +9,20 @@
 
 <script>
 // @todo: This should register a paginated/filterable/queryable list of books I own
+
 import AllBooksShelf from "@/components/shelves/AllBooksShelf";
 import BasicHero from "@/components/layouts/BasicHero.vue";
+
+import { FETCH_BOOKS } from "@/store/variables";
 
 export default {
   name: "BooksView",
   components: {
     AllBooksShelf,
     BasicHero,
+  },
+  mounted() {
+    this.$store.dispatch(FETCH_BOOKS);
   },
 };
 </script>

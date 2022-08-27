@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import axios from "axios";
+import { mapState } from "vuex";
 
 import BookCard from "@/components/books/BookCard.vue";
 
@@ -38,11 +38,6 @@ export default {
   name: "AllBooksShelf",
   components: {
     BookCard,
-  },
-  data() {
-    return {
-      books: [],
-    };
   },
   computed: {
     // currentPageParams() {
@@ -81,13 +76,7 @@ export default {
       const lastIndex = that.currentPage * 10;
       return that.books.slice(firstIndex, lastIndex);
     },
-  },
-  async mounted() {
-    const that = this;
-    const url = `${process.env.VUE_APP_API_URL}/books`;
-
-    const response = await axios.get(url);
-    that.books = response.data;
+    ...mapState(["books"]),
   },
 };
 </script>
