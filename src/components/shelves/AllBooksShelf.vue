@@ -84,7 +84,7 @@ export default {
   },
   async mounted() {
     const that = this;
-    const url = "http://localhost:3000/books";
+    const url = `${process.env.VUE_APP_API_URL}/books`;
 
     const response = await axios.get(url);
     that.books = response.data;
