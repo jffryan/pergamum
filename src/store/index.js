@@ -29,6 +29,7 @@ export const state = () => {
 export const mutations = {
   [RECEIVE_BOOKS](state, books) {
     state.books = books;
+    state.filteredBooks = books;
   },
   [SET_FILTER_BY_YEAR](state, year) {
     state.filters = {
@@ -39,7 +40,7 @@ export const mutations = {
   [FILTER_THROUGH_BOOKS](state) {
     let rawList = state.books;
     let yearFilter = state.filters.year;
-    if (yearFilter !== undefined) {
+    if (yearFilter !== undefined || yearFilter !== null) {
       state.filteredBooks = filterByYear(rawList, yearFilter);
     } else {
       state.filteredBooks = rawList;

@@ -66,7 +66,7 @@ export default {
       const that = this;
       const nextPage = that.currentPage + 1;
       // Need to include non-whole number values
-      const maxPage = Math.ceil(that.books.length / 10);
+      const maxPage = Math.ceil(that.filteredBooks.length / 10);
       // Only navigate forward if the next page is less than the greatest possible index
       return nextPage <= maxPage ? nextPage : null;
     },
@@ -74,9 +74,9 @@ export default {
       const that = this;
       const firstIndex = (that.currentPage - 1) * 10;
       const lastIndex = that.currentPage * 10;
-      return that.books.slice(firstIndex, lastIndex);
+      return that.filteredBooks.slice(firstIndex, lastIndex);
     },
-    ...mapState(["books"]),
+    ...mapState(["filteredBooks"]),
   },
 };
 </script>
