@@ -59,6 +59,10 @@ export default {
   updated() {
     this.updateYearFilter();
   },
+  unmounted() {
+    this.$store.commit(SET_FILTER_BY_YEAR, null);
+    this.$store.commit(FILTER_THROUGH_BOOKS);
+  },
   methods: {
     updateYearFilter() {
       this.$store.commit(SET_FILTER_BY_YEAR, this.yearInView);

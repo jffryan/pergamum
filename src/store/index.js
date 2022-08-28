@@ -40,10 +40,10 @@ export const mutations = {
   [FILTER_THROUGH_BOOKS](state) {
     let rawList = state.books;
     let yearFilter = state.filters.year;
-    if (yearFilter !== undefined || yearFilter !== null) {
-      state.filteredBooks = filterByYear(rawList, yearFilter);
-    } else {
+    if (yearFilter === undefined || yearFilter === null) {
       state.filteredBooks = rawList;
+    } else {
+      state.filteredBooks = filterByYear(rawList, yearFilter);
     }
   },
 };
