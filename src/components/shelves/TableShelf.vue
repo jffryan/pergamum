@@ -49,7 +49,7 @@
 import allBooks from "@/development/allBooks";
 import BookTable from "@/components/books/BookTable.vue";
 export default {
-  name: "ShelfTable",
+  name: "TableShelf",
   components: {
     BookTable,
   },

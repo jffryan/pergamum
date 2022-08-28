@@ -3,7 +3,7 @@
     <basic-hero :title="yearInView" />
     <div class="col-start-2 col-span-10">
       <quick-links layout="horizontal" :linkset="yearsLinks" />
-      <shelf-table :shelf-selection="setShelf" />
+      <table-shelf :shelf-selection="setShelf" />
     </div>
   </div>
 </template>
@@ -14,7 +14,7 @@ import axios from "axios";
 // @Todo: Make this page have dynamic imports to pull the proper shelf table data
 import BasicHero from "@/components/layouts/BasicHero.vue";
 import QuickLinks from "@/components/navigation/QuickLinks.vue";
-import ShelfTable from "@/components/shelves/ShelfTable.vue";
+import TableShelf from "@/components/shelves/TableShelf.vue";
 
 import quickLinksConfig from "@/utils/quickLinksConfig.js";
 const { years: yearsMenu } = quickLinksConfig;
@@ -24,7 +24,7 @@ export default {
   components: {
     BasicHero,
     QuickLinks,
-    ShelfTable,
+    TableShelf,
   },
   data() {
     return {
