@@ -388,6 +388,72 @@
       "duration": null,
       "awards": null,
       "id": 19
+    },
+    {
+      "title": "On Writing Well",
+      "author": [
+        "William Zinsser"
+      ],
+      "pageCount": 321,
+      "dateRead": {
+        "month": 3,
+        "day": 12,
+        "year": 2022
+      },
+      "rating": 4,
+      "genre": [
+        "Rhetoric",
+        "Writing",
+        "Self-Help"
+      ],
+      "bookType": "Paper",
+      "duration": 56,
+      "awards": null,
+      "id": 20
+    },
+    {
+      "title": "A Short Guide to Writing About History",
+      "author": [
+        "Richard Marius"
+      ],
+      "pageCount": 192,
+      "dateRead": {
+        "month": 4,
+        "day": 3,
+        "year": 2022
+      },
+      "rating": 4,
+      "genre": [
+        "Rhetoric",
+        "Writing",
+        "History"
+      ],
+      "bookType": "Paper",
+      "duration": 22,
+      "awards": null,
+      "id": 21
+    },
+    {
+      "title": "Amusing Ourselves to Death",
+      "author": [
+        "Neil Postman"
+      ],
+      "pageCount": 204,
+      "dateRead": {
+        "month": 4,
+        "day": 9,
+        "year": 2022
+      },
+      "rating": 4,
+      "genre": [
+        "Rhetoric",
+        "Writing",
+        "History"
+      ],
+      "bookType": "Paper",
+      "duration": 6,
+      "awards": null,
+      "id": 22
     }
   ]
 }

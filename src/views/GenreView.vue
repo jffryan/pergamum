@@ -27,6 +27,7 @@
 
 <script>
 // @todo: Display genres + merge & refactor with other shelves
+// @todo: button toggle starting to get redundant. Used twice now!
 import BasicHero from "@/components/layouts/BasicHero.vue";
 import CardShelf from "@/components/shelves/CardShelf.vue";
 import TableShelf from "@/components/shelves/TableShelf.vue";
