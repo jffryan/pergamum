@@ -35,7 +35,7 @@ import BookCard from "@/components/books/BookCard.vue";
 import { isEmptyObject } from "@/utils/common";
 
 export default {
-  name: "AllBooksShelf",
+  name: "CardShelf",
   components: {
     BookCard,
   },
