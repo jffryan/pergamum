@@ -3,19 +3,20 @@
     <basic-hero :title="yearInView" />
     <div class="col-start-2 col-span-10">
       <quick-links layout="horizontal" :linkset="yearsLinks" />
-      <table-shelf :shelf-selection="setShelf" />
+      <table-shelf />
     </div>
   </div>
 </template>
 
 <script>
-import axios from "axios";
+// @TODO: Make everything downwind of this more agnostic?
+import { mapState } from "vuex";
 
-// @Todo: Make this page have dynamic imports to pull the proper shelf table data
 import BasicHero from "@/components/layouts/BasicHero.vue";
 import QuickLinks from "@/components/navigation/QuickLinks.vue";
 import TableShelf from "@/components/shelves/TableShelf.vue";
 
+import { FETCH_BOOKS } from "@/store/variables";
 import quickLinksConfig from "@/utils/quickLinksConfig.js";
 const { years: yearsMenu } = quickLinksConfig;
 
@@ -31,11 +32,13 @@ export default {
       yearsLinks: [
         ...yearsMenu.links,
         {
-          path: "/shelf/unfinished",
+          name: "year",
+          params: {
+            year: "unfinished",
+          },
           text: "Unfinished",
         },
       ],
-      books: [],
     };
   },
   computed: {
@@ -49,26 +52,11 @@ export default {
       const currentShelf = that.filterByYear(that.books, currentFilter);
       return currentShelf;
     },
+    ...mapState(["books"]),
   },
   async mounted() {
-    const that = this;
-    const url = "http://localhost:3000/books";
-
-    const response = await axios.get(url);
-    that.books = response.data;
+    this.$store.dispatch(FETCH_BOOKS);
   },
-  methods: {
-    filterByYear(array, year) {
-      if (year === "unfinished") {
-        const result = array.filter((arr) => arr.dateRead.year === null);
-        return result;
-      } else {
-        const result = array.filter(
-          (arr) => arr.dateRead.year === parseInt(year)
-        );
-        return result;
-      }
-    },
-  },
+  methods: {},
 };
 </script>

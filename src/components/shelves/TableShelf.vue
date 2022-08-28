@@ -29,40 +29,25 @@
         <p>Awards</p>
       </div>
     </div>
-    <div v-for="(book, i) in shelfSelection" :key="book.id">
-      <book-table
-        v-if="i % 2 === 0"
-        :book-details="shelfSelection[i]"
-        class="py-1"
-      />
-      <book-table
-        v-else
-        :book-details="shelfSelection[i]"
-        class="bg-slate-200 py-1"
-      />
+    <div v-for="(book, i) in books" :key="book.id">
+      <book-table v-if="i % 2 === 0" :book-details="books[i]" class="py-1" />
+      <book-table v-else :book-details="books[i]" class="bg-slate-200 py-1" />
     </div>
   </section>
 </template>
 
 <script>
-// @TODO: Make this agnostic to a specific object for its data
-import allBooks from "@/development/allBooks";
+import { mapState } from "vuex";
+
 import BookTable from "@/components/books/BookTable.vue";
+
 export default {
   name: "TableShelf",
   components: {
     BookTable,
   },
-  props: {
-    shelfSelection: {
-      type: Array,
-      required: true,
-    },
-  },
-  data() {
-    return {
-      allBooks,
-    };
+  computed: {
+    ...mapState(["books"]),
   },
 };
 </script>
