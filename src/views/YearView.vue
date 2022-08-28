@@ -16,7 +16,7 @@ import BasicHero from "@/components/layouts/BasicHero.vue";
 import QuickLinks from "@/components/navigation/QuickLinks.vue";
 import TableShelf from "@/components/shelves/TableShelf.vue";
 
-import { FETCH_BOOKS } from "@/store/variables";
+import { FETCH_BOOKS, SET_FILTER_BY_YEAR } from "@/store/variables";
 import quickLinksConfig from "@/utils/quickLinksConfig.js";
 const { years: yearsMenu } = quickLinksConfig;
 
@@ -46,17 +46,14 @@ export default {
       const that = this;
       return that.$route.params.year;
     },
-    setShelf() {
-      const that = this;
-      const currentFilter = that.$route.params.year;
-      const currentShelf = that.filterByYear(that.books, currentFilter);
-      return currentShelf;
-    },
     ...mapState(["books"]),
   },
-  async mounted() {
+  mounted() {
     this.$store.dispatch(FETCH_BOOKS);
+    this.$store.commit(SET_FILTER_BY_YEAR, this.yearInView);
   },
-  methods: {},
+  updated() {
+    this.$store.commit(SET_FILTER_BY_YEAR, this.yearInView);
+  },
 };
 </script>

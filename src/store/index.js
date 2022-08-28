@@ -2,7 +2,11 @@ import { createStore } from "vuex";
 
 import getBooks from "@/api/getBooks";
 
-import { RECEIVE_BOOKS, FETCH_BOOKS } from "@/store/variables";
+import {
+  FETCH_BOOKS,
+  RECEIVE_BOOKS,
+  SET_FILTER_BY_YEAR,
+} from "@/store/variables";
 
 // ---------------------------
 //* STATE
@@ -11,6 +15,7 @@ import { RECEIVE_BOOKS, FETCH_BOOKS } from "@/store/variables";
 export const state = () => {
   return {
     books: [],
+    filters: {},
   };
 };
 
@@ -21,6 +26,12 @@ export const state = () => {
 export const mutations = {
   [RECEIVE_BOOKS](state, books) {
     state.books = books;
+  },
+  [SET_FILTER_BY_YEAR](state, year) {
+    state.filters = {
+      ...state.filters,
+      year,
+    };
   },
 };
 

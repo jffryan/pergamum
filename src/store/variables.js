@@ -1,2 +1,3 @@
-export const RECEIVE_BOOKS = "RECEIVE_BOOKS";
 export const FETCH_BOOKS = "FETCH_BOOKS";
+export const RECEIVE_BOOKS = "RECEIVE_BOOKS";
+export const SET_FILTER_BY_YEAR = "SET_FILTER_BY_YEAR";
