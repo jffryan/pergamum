@@ -1,9 +1,11 @@
 import { createStore } from "vuex";
 
 import getBooks from "@/api/getBooks";
+import filterByYear from "@/utils/filters/filterByYear";
 
 import {
   FETCH_BOOKS,
+  FILTER_THROUGH_BOOKS,
   RECEIVE_BOOKS,
   SET_FILTER_BY_YEAR,
 } from "@/store/variables";
@@ -16,6 +18,7 @@ export const state = () => {
   return {
     books: [],
     filters: {},
+    filteredBooks: [],
   };
 };
 
@@ -32,6 +35,15 @@ export const mutations = {
       ...state.filters,
       year,
     };
+  },
+  [FILTER_THROUGH_BOOKS](state) {
+    let rawList = state.books;
+    let yearFilter = state.filters.year;
+    if (yearFilter !== undefined) {
+      state.filteredBooks = filterByYear(rawList, yearFilter);
+    } else {
+      state.filteredBooks = rawList;
+    }
   },
 };
 

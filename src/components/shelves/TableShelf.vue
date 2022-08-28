@@ -29,9 +29,17 @@
         <p>Awards</p>
       </div>
     </div>
-    <div v-for="(book, i) in books" :key="book.id">
-      <book-table v-if="i % 2 === 0" :book-details="books[i]" class="py-1" />
-      <book-table v-else :book-details="books[i]" class="bg-slate-200 py-1" />
+    <div v-for="(book, i) in filteredBooks" :key="book.id">
+      <book-table
+        v-if="i % 2 === 0"
+        :book-details="filteredBooks[i]"
+        class="py-1"
+      />
+      <book-table
+        v-else
+        :book-details="filteredBooks[i]"
+        class="bg-slate-200 py-1"
+      />
     </div>
   </section>
 </template>
@@ -47,7 +55,7 @@ export default {
     BookTable,
   },
   computed: {
-    ...mapState(["books"]),
+    ...mapState(["filteredBooks"]),
   },
 };
 </script>
