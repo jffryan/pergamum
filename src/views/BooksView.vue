@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-12 gap-2 pt-20">
+  <div class="grid grid-cols-12 gap-2 py-20">
     <basic-hero title="Books" />
     <div class="col-start-2 col-span-10">
       <div class="flex justify-end">
@@ -46,6 +46,7 @@ export default {
   mounted() {
     this.$store.dispatch(FETCH_BOOKS);
   },
+  // @todo: Base off state?
   methods: {
     setShelfStyle(shelfStyle) {
       this.shelfStyle = shelfStyle;

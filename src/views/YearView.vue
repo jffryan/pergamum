@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-12 gap-2 pt-20">
+  <div class="grid grid-cols-12 gap-2 py-20">
     <basic-hero :title="yearInView" />
     <div class="col-start-2 col-span-10">
       <quick-links layout="horizontal" :linkset="yearsLinks" />
@@ -10,8 +10,6 @@
 
 <script>
 // @TODO: Make everything downwind of this more agnostic?
-import { mapState } from "vuex";
-
 import BasicHero from "@/components/layouts/BasicHero.vue";
 import QuickLinks from "@/components/navigation/QuickLinks.vue";
 import TableShelf from "@/components/shelves/TableShelf.vue";
@@ -50,22 +48,20 @@ export default {
       const that = this;
       return that.$route.params.year;
     },
-    ...mapState(["books"]),
   },
   async mounted() {
     await this.$store.dispatch(FETCH_BOOKS);
-    this.updateYearFilter();
+    this.updateYearFilter(this.yearInView);
   },
   updated() {
-    this.updateYearFilter();
+    this.updateYearFilter(this.yearInView);
   },
   unmounted() {
-    this.$store.commit(SET_FILTER_BY_YEAR, null);
-    this.$store.commit(FILTER_THROUGH_BOOKS);
+    this.updateYearFilter(null);
   },
   methods: {
-    updateYearFilter() {
-      this.$store.commit(SET_FILTER_BY_YEAR, this.yearInView);
+    updateYearFilter(year) {
+      this.$store.commit(SET_FILTER_BY_YEAR, year);
       this.$store.commit(FILTER_THROUGH_BOOKS);
     },
   },

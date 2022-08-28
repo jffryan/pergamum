@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-12 gap-2 pt-20">
+  <div class="grid grid-cols-12 gap-2 py-20">
     <basic-hero title="Add Book" />
     <div class="col-start-2 col-span-10">
       <add-book-form />

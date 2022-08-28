@@ -2,11 +2,13 @@ import { createStore } from "vuex";
 
 import getBooks from "@/api/getBooks";
 import filterByYear from "@/utils/filters/filterByYear";
+import filterByGenre from "@/utils/filters/filterByGenre";
 
 import {
   FETCH_BOOKS,
   FILTER_THROUGH_BOOKS,
   RECEIVE_BOOKS,
+  SET_FILTER_BY_GENRE,
   SET_FILTER_BY_YEAR,
 } from "@/store/variables";
 
@@ -17,7 +19,10 @@ import {
 export const state = () => {
   return {
     books: [],
-    filters: {},
+    filters: {
+      year: null,
+      genre: null,
+    },
     filteredBooks: [],
   };
 };
@@ -40,11 +45,22 @@ export const mutations = {
   [FILTER_THROUGH_BOOKS](state) {
     let rawList = state.books;
     let yearFilter = state.filters.year;
-    if (yearFilter === undefined || yearFilter === null) {
-      state.filteredBooks = rawList;
-    } else {
+    let genreFilter = state.filters.genre;
+    if (yearFilter !== null) {
       state.filteredBooks = filterByYear(rawList, yearFilter);
+    } else if (genreFilter !== null) {
+      state.filteredBooks = filterByGenre(rawList, genreFilter);
+    } else {
+      state.filteredBooks = rawList;
     }
+  },
+  [SET_FILTER_BY_GENRE](state, genre) {
+    // @TODO: Make this an array or possible to include more than one genre at a time
+    // @TODO: Also make all filters configurable so more than one filter can be active at a time
+    state.filters = {
+      ...state.filters,
+      genre,
+    };
   },
 };
 
