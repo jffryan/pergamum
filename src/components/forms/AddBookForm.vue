@@ -70,16 +70,28 @@
           @update-repeater-input="updateRepeaterInput"
         />
       </div>
-      <!-- Star Rating -->
-      <div class="w-full mb-4 flex">
-        <div class="w-1/2">
-          <star-rating
-            input-label="Rating"
-            input-key="rating"
-            placeholder=""
-            :value="formData.rating"
-            @update-rating-input="updateRatingInput"
-          />
+      <!-- Completed Toggle -->
+      <div class="w-full mb-4 flex align-baseline">
+        <label class="mb-4 block">Book finished: </label>
+        <input
+          v-model="formData.completed"
+          type="checkbox"
+          class="block focus:outline-none border-b border-brand-gray-2 mb-4 ml-4"
+        />
+      </div>
+      <!-- Toggle Derivative -->
+      <div v-if="formData.completed" class="w-full mb-4 flex">
+        <!-- Star Rating -->
+        <div class="w-full mb-4 flex">
+          <div class="w-1/2">
+            <star-rating
+              input-label="Rating"
+              input-key="rating"
+              placeholder=""
+              :value="formData.rating"
+              @update-rating-input="updateRatingInput"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -113,6 +125,7 @@ export default {
         bookType: "",
         bookTypes: ["paper", "audio", "pirated", "borrowed"],
         genres: [""],
+        completed: false,
         rating: null,
       },
     };

@@ -2,7 +2,7 @@
   <section>
     <div class="grid grid-cols-10">
       <div class="col-span-2 pl-2">
-        <p>{{ title }}</p>
+        <router-link :to="linkDestination">{{ title }}</router-link>
       </div>
       <div>
         <p v-for="authorName in author" :key="authorName">{{ authorName }}</p>
@@ -81,6 +81,11 @@ export default {
       duration,
       awards,
     };
+  },
+  computed: {
+    linkDestination() {
+      return `/books/${this.bookDetails.id}`;
+    },
   },
 };
 </script>

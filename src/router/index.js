@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from "vue-router";
 // This is also a ton of boilerplate
 const HomeView = () => import("@/views/HomeView.vue");
 const BooksView = () => import("@/views/BooksView.vue");
+const BookView = () => import("@/views/BookView.vue");
 const YearView = () => import("@/views/YearView.vue");
 const ArchiveView = () => import("@/views/ArchiveView.vue");
 const StatsView = () => import("@/views/StatsView.vue");
@@ -23,6 +24,11 @@ const routes = [
     path: "/books",
     name: "books",
     component: BooksView,
+  },
+  {
+    path: "/books/:id",
+    name: "book",
+    component: BookView,
   },
   {
     path: "/shelf/:year",

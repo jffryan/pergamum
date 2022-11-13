@@ -40,7 +40,9 @@
           </ul>
         </div>
         <div class="mt-2 text-center">
-          <router-link to="books" class="text-brand-blue-1">Expand</router-link>
+          <router-link :to="linkDestination" class="text-brand-blue-1"
+            >Expand</router-link
+          >
         </div>
       </div>
     </div>
@@ -54,6 +56,11 @@ export default {
     book: {
       type: Object,
       required: true,
+    },
+  },
+  computed: {
+    linkDestination() {
+      return `/books/${this.book.id}`;
     },
   },
 };
