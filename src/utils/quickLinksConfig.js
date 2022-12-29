@@ -6,16 +6,44 @@ const quickLinksConfig = {
         text: "All books",
       },
       {
-        name: "books",
-        text: "Paper books",
+        name: "bookFormat",
+        params: {
+          format: "paperback",
+          id: 1,
+        },
+        text: "Paperbacks",
       },
       {
-        name: "books",
-        text: "Pirated books",
+        name: "bookFormat",
+        params: {
+          format: "hardcover",
+          id: 2,
+        },
+        text: "Hardcover books",
       },
       {
-        name: "books",
-        text: "Audio books",
+        name: "bookFormat",
+        params: {
+          format: "ebook",
+          id: 3,
+        },
+        text: "Ebooks",
+      },
+      {
+        name: "bookFormat",
+        params: {
+          format: "pirated",
+          id: 4,
+        },
+        text: "Pirated",
+      },
+      {
+        name: "bookFormat",
+        params: {
+          format: "audiobook",
+          id: 5,
+        },
+        text: "Audiobooks",
       },
     ],
     title: "Books",
@@ -59,19 +87,6 @@ const quickLinksConfig = {
       },
     ],
     title: "Years",
-  },
-  archive: {
-    links: [
-      {
-        name: "archive",
-        text: "Archive",
-      },
-      {
-        name: "archive",
-        text: "Notes",
-      },
-    ],
-    title: "Archive",
   },
 };
 

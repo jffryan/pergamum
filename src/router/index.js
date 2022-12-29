@@ -2,10 +2,9 @@ import { createRouter, createWebHistory } from "vue-router";
 // @todo: Figure out a less manual way to do all this
 // This is also a ton of boilerplate
 const HomeView = () => import("@/views/HomeView.vue");
-const BooksView = () => import("@/views/BooksView.vue");
 const BookView = () => import("@/views/BookView.vue");
 const YearView = () => import("@/views/YearView.vue");
-const ArchiveView = () => import("@/views/ArchiveView.vue");
+const BooksView = () => import("@/views/BooksView.vue");
 const StatsView = () => import("@/views/StatsView.vue");
 const ReadingListView = () => import("@/views/ReadingListView.vue");
 const RadarView = () => import("@/views/RadarView.vue");
@@ -26,19 +25,19 @@ const routes = [
     component: BooksView,
   },
   {
-    path: "/books/:id",
+    path: "/book/:id",
     name: "book",
     component: BookView,
+  },
+  {
+    path: "/books/:format",
+    name: "bookFormat",
+    component: BooksView,
   },
   {
     path: "/shelf/:year",
     name: "year",
     component: YearView,
-  },
-  {
-    path: "/archive",
-    name: "archive",
-    component: ArchiveView,
   },
   {
     path: "/stats",

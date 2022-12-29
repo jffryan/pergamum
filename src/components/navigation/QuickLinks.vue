@@ -73,6 +73,6 @@ export default {
 
 .horizontal .list-item .list-link,
 .vertical .list-item .list-link {
-  @apply flex items-center h-full p-2 hover:text-brand-blue-2;
+  @apply flex items-center h-full p-2 hover:underline;
 }
 </style>

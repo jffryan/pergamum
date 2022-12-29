@@ -98,6 +98,6 @@ export default {
 
 <style scoped>
 .active {
-  @apply border-b-2 border-brand-blue-2;
+  @apply border-b-2 border-dreamer-purple-base;
 }
 </style>

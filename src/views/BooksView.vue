@@ -1,56 +1,39 @@
 <template>
-  <div class="grid grid-cols-12 gap-2 py-20">
+  <div class="grid grid-cols-12 gap-2 py-20 text-dreamer-white-text">
     <basic-hero title="Books" />
     <div class="col-start-2 col-span-10">
-      <div class="flex justify-end">
-        <button
-          class="pr-2 pb-2 hover:underline"
-          @click="setShelfStyle('card')"
-        >
-          Card
-        </button>
-        <button
-          class="pr-2 pb-2 hover:underline"
-          @click="setShelfStyle('table')"
-        >
-          Table
-        </button>
-      </div>
-      <card-shelf v-if="shelfStyle === 'card'" />
-      <table-shelf v-if="shelfStyle === 'table'" />
+      <table-shelf :displayed-books="displayedBooks" />
     </div>
   </div>
 </template>
 
 <script>
-// @todo: This should register a paginated/filterable/queryable list of books I own
-
+// @todo: This should list past years + other miscellaneous subnavigation (best of lists? etc)
+// Currently I'm pulling books using mysql
 import BasicHero from "@/components/layouts/BasicHero.vue";
-import CardShelf from "@/components/shelves/CardShelf";
-import TableShelf from "@/components/shelves/TableShelf";
+import TableShelf from "@/components/shelves/TableShelf.vue";
 
+import { mapState } from "vuex";
+
+import getBooks from "@/api/getBooksNode";
 import { FETCH_BOOKS } from "@/store/variables";
 
 export default {
   name: "BooksView",
   components: {
     BasicHero,
-    CardShelf,
     TableShelf,
   },
-  data() {
-    return {
-      shelfStyle: "card",
-    };
-  },
-  mounted() {
-    this.$store.dispatch(FETCH_BOOKS);
-  },
-  // @todo: Base off state?
-  methods: {
-    setShelfStyle(shelfStyle) {
-      this.shelfStyle = shelfStyle;
+  computed: {
+    displayedBooks() {
+      return this.filteredBooks.slice(0, 10);
     },
+    ...mapState(["filteredBooks"]),
+  },
+  async mounted() {
+    let bookResponse = await getBooks();
+    this.books = bookResponse;
+    this.$store.dispatch(FETCH_BOOKS);
   },
 };
 </script>

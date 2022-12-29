@@ -1,12 +1,12 @@
 <template>
   <header :class="['w-full', 'text-sm', headerHeightClass]">
-    <div class="fixed top-0 left-0 w-full h-16 bg-white">
+    <div class="fixed top-0 left-0 w-full h-16 bg-dreamer-purple-light">
       <div
-        class="flex flex-nowrap h-full px-8 mx-auto border-b border-solid border-brand-gray-1"
+        class="flex flex-nowrap h-full px-8 mx-auto border-b border-solid border-dreamer-purple-base"
       >
         <router-link
           to="/"
-          class="flex items-center h-full text-xl transition duration-150 ease-out hover:text-brand-blue-2"
+          class="flex items-center h-full text-xl transition duration-150 ease-out text-dreamer-white-text hover:text-dreamer-gray-text"
           >{{ siteTitle }}</router-link
         >
         <nav class="h-full ml-12">
@@ -20,7 +20,7 @@
               <router-link
                 :to="menuItem.path"
                 tabindex="0"
-                class="flex items-center h-full p-2 hover:text-brand-blue-2"
+                class="flex items-center h-full p-2 text-dreamer-white-text hover:text-dreamer-gray-text"
                 >{{ menuItem.text }}</router-link
               >
             </li>
@@ -59,10 +59,6 @@ export default {
         {
           text: "2022",
           path: "/shelf/2022",
-        },
-        {
-          text: "Archive",
-          path: "/archive",
         },
         {
           text: "Stats",

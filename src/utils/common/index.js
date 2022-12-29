@@ -1,3 +1,4 @@
+import convertToUrlString from "./convertToUrlString";
 import isEmptyObject from "./isEmptyObject";
 
-export { isEmptyObject };
+export { convertToUrlString, isEmptyObject };

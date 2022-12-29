@@ -36,14 +36,10 @@ button {
 }
 
 .primary {
-  @apply text-white bg-brand-blue-2 hover:shadow-blue;
+  @apply text-white bg-dreamer-purple-dark hover:shadow-blue;
 }
 
 .secondary {
-  @apply text-brand-blue-2 bg-transparent hover:bg-brand-blue-1 hover:text-white;
-}
-
-.accent {
-  @apply bg-brand-red-1 text-white;
+  @apply text-dreamer-purple-dark bg-transparent hover:bg-dreamer-purple-dark hover:text-white;
 }
 </style>
