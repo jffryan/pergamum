@@ -20,7 +20,7 @@
     <div v-for="(book, i) in displayedBooks" :key="book.version_id">
       <book-table
         v-if="i % 2 === 0"
-        class="py-1 h-100 bg-dreamer-gray-text text-black"
+        class="py-1 h-100 bg-dreamer-gray text-black"
         :book-details="book"
       />
       <book-table

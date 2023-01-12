@@ -1,9 +1,9 @@
 <template>
-  <form class="flex items-center w-full">
+  <form class="flex items-center w-10/12 py-8 px-16 bg-dreamer-purple-light">
     <div class="w-full h-full text-base font-light">
       <!-- Title -->
       <div class="w-full mb-4">
-        <div class="w-1/2">
+        <div class="w-8/12">
           <text-input
             input-label="Title"
             input-key="title"
@@ -25,7 +25,7 @@
       </div>
       <!-- Book type -->
       <div class="w-full mb-4">
-        <div class="w-1/2">
+        <div class="w-8/12">
           <dropdown-input
             input-label="Type"
             input-key="bookType"
@@ -38,7 +38,7 @@
       </div>
       <!-- Page count -->
       <div v-if="formData.bookType !== 'audio'" class="w-full mb-4">
-        <div class="w-1/2">
+        <div class="w-8/12">
           <number-input
             input-label="Page Count"
             input-key="pageCount"
@@ -50,7 +50,7 @@
       </div>
       <!-- Audio length -->
       <div v-else-if="formData.bookType === 'audio'" class="w-full mb-4">
-        <div class="w-1/2">
+        <div class="w-8/12">
           <time-input
             input-label="Audio length"
             input-key="audioLength"
@@ -83,7 +83,7 @@
       <div v-if="formData.completed" class="w-full mb-4 flex">
         <!-- Star Rating -->
         <div class="w-full mb-4 flex">
-          <div class="w-1/2">
+          <div class="w-8/12">
             <star-rating
               input-label="Rating"
               input-key="rating"

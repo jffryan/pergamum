@@ -2,7 +2,7 @@
   <section>
     <div class="grid grid-cols-10">
       <div class="col-span-3 pl-2">
-        <router-link :to="linkDestination">{{ title }}</router-link>
+        <router-link :to="navigateToBook">{{ title }}</router-link>
       </div>
       <div class="col-span-2">
         <p>{{ authors }}</p>
@@ -21,7 +21,6 @@
 </template>
 
 <script>
-import { convertToUrlString } from "@/utils/common";
 export default {
   name: "BookTable",
   props: {
@@ -34,6 +33,7 @@ export default {
           num_pages: 0,
           genres: "Book",
           format_name: "Paper",
+          book_id: 1,
           version_id: 1,
         };
       },
@@ -41,21 +41,29 @@ export default {
   },
   data() {
     const that = this;
-    const { title, authors, num_pages, genres, format_name, version_id } =
-      that.bookDetails;
+    const {
+      title,
+      authors,
+      num_pages,
+      genres,
+      format_name,
+      book_id,
+      version_id,
+    } = that.bookDetails;
     return {
       title,
       authors,
       num_pages,
       genres,
       format_name,
+      book_id,
       version_id,
     };
   },
+
   computed: {
-    linkDestination() {
-      const bookUrlString = convertToUrlString(this.bookDetails.title);
-      return `/book/${bookUrlString}`;
+    navigateToBook() {
+      return `/book/${this.book_id}`;
     },
   },
 };

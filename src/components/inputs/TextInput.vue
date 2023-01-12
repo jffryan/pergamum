@@ -2,7 +2,7 @@
   <label class="mb-4 block">{{ inputLabel }}</label>
   <input
     type="text"
-    class="w-full block text-lg font-normal focus:outline-none border-b border-brand-gray-2 mb-4"
+    class="w-full block mb-4 px-2 py-1 text-lg text-dreamer-purple-black font-normal focus:outline-none border-b border-brand-gray-2"
     :placeholder="placeholder"
     :value="value"
     :inputKey="inputKey"

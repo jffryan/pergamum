@@ -36,10 +36,16 @@ button {
 }
 
 .primary {
-  @apply text-white bg-dreamer-purple-dark hover:shadow-blue;
+  @apply text-white bg-dreamer-purple-dark hover:shadow-soft-purple;
 }
 
 .secondary {
-  @apply text-dreamer-purple-dark bg-transparent hover:bg-dreamer-purple-dark hover:text-white;
+  @apply text-dreamer-purple-dark bg-dreamer-balanced-purple-offwhite hover:shadow-soft-white;
+}
+
+.accent {
+  @apply hover:shadow-accent;
+  /* background-color: #db3a34; */
+  background-color: #5c1816;
 }
 </style>

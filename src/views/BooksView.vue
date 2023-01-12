@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-12 gap-2 py-20 text-dreamer-white-text">
+  <div class="grid grid-cols-12 gap-2 py-20 text-dreamer-white">
     <basic-hero title="Books" />
     <div class="col-start-2 col-span-10">
       <table-shelf :displayed-books="displayedBooks" />

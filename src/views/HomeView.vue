@@ -1,5 +1,5 @@
 <template>
-  <section class="text-dreamer-white-text">
+  <section class="text-dreamer-white">
     <div class="grid grid-cols-12 gap-2 py-20">
       <basic-hero title="Pergamum" />
       <div class="col-start-2 col-span-10">

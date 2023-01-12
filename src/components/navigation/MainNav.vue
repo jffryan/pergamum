@@ -6,7 +6,7 @@
       >
         <router-link
           to="/"
-          class="flex items-center h-full text-xl transition duration-150 ease-out text-dreamer-white-text hover:text-dreamer-gray-text"
+          class="flex items-center h-full text-xl transition duration-150 ease-out text-dreamer-white hover:text-dreamer-gray"
           >{{ siteTitle }}</router-link
         >
         <nav class="h-full ml-12">
@@ -20,7 +20,7 @@
               <router-link
                 :to="menuItem.path"
                 tabindex="0"
-                class="flex items-center h-full p-2 text-dreamer-white-text hover:text-dreamer-gray-text"
+                class="flex items-center h-full p-2 text-dreamer-white hover:text-dreamer-gray"
                 >{{ menuItem.text }}</router-link
               >
             </li>

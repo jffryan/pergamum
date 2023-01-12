@@ -1,26 +1,29 @@
 <template>
-  <div class="w-1/2">
+  <div class="w-8/12">
     <label class="mb-4 block">{{ inputLabel }}</label>
     <input
       v-for="(val, i) in value.length"
       :key="i"
       type="text"
-      class="w-full block text-lg font-normal focus:outline-none border-b border-brand-gray-2 mb-4"
+      class="w-full block px-2 py-1 text-lg text-dreamer-purple-black font-normal focus:outline-none border-b border-brand-gray-2"
+      :class="value.length > 1 ? 'mb-4' : ''"
       :placeholder="placeholder"
       :value="value[i]"
       :inputKey="inputKey"
       @input="handleInput($event, i)"
     />
   </div>
-  <div class="mt-4 ml-12">
-    <action-button button-text="+" button-type="primary" @click="addInput" />
-    <action-button
-      v-if="value.length > 1"
-      button-text="-"
-      button-type="accent"
-      class="ml-4"
-      @click="removeInput"
-    />
+  <div class="ml-12 flex flex-col justify-start">
+    <div class="mt-4">
+      <action-button button-text="+" button-type="primary" @click="addInput" />
+      <action-button
+        v-if="value.length > 1"
+        button-text="-"
+        button-type="accent"
+        class="ml-4"
+        @click="removeInput"
+      />
+    </div>
   </div>
 </template>
 
