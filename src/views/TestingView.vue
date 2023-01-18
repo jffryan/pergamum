@@ -4,7 +4,8 @@
   >
     <basic-hero title="Testing/Demos" />
     <div class="col-start-2 col-span-6">
-      <test-create-data />
+      <test-create-books class="mb-6" />
+      <test-create-authors />
     </div>
   </div>
 </template>
@@ -12,13 +13,15 @@
 <script>
 // This is for testing/demoing things in progress
 import BasicHero from "@/components/layouts/BasicHero.vue";
-import TestCreateData from "@/components/testing/TestCreateData.vue";
+import TestCreateAuthors from "@/components/testing/TestCreateAuthors.vue";
+import TestCreateBooks from "@/components/testing/TestCreateBooks.vue";
 
 export default {
   name: "TestingView",
   components: {
     BasicHero,
-    TestCreateData,
+    TestCreateAuthors,
+    TestCreateBooks,
   },
 };
 </script>

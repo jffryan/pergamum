@@ -18,4 +18,23 @@ const booksToCreate = [
   },
 ];
 
-export { booksToCreate };
+const authorsToCreate = [
+  {
+    first_name: "Urza",
+    last_name: "Terisiare",
+  },
+  {
+    first_name: "Chalmers",
+    last_name: "Johnson",
+  },
+  {
+    first_name: "Karl",
+    last_name: "Marx",
+  },
+  {
+    first_name: "Friedrich",
+    last_name: "Engels",
+  },
+];
+
+export { booksToCreate, authorsToCreate };

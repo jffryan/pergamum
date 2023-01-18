@@ -55,22 +55,25 @@ export default {
   },
   methods: {
     createBooks() {
-      console.log("Create books");
       this.booksToCreate.forEach((book) => {
         addBook(book);
       });
+      console.log("Books created");
     },
     async fetchBooks() {
-      console.log("Fetch books");
       const response = await getAllBooks();
       this.fetchedBooks = response.data;
-      console.log(this.fetchedBooks);
+      console.log("Books fetched.");
     },
     deleteBooks() {
-      console.log("Delete books");
-      this.idsToDelete.forEach((id) => {
-        deleteBook(id);
-      });
+      if (this.idsToDelete) {
+        this.idsToDelete.forEach((id) => {
+          deleteBook(id);
+        });
+        console.log("Books deleted");
+      } else {
+        console.log("No books to delete");
+      }
     },
   },
 };
