@@ -9,7 +9,8 @@ const StatsView = () => import("@/views/StatsView.vue");
 const ReadingListView = () => import("@/views/ReadingListView.vue");
 const RadarView = () => import("@/views/RadarView.vue");
 const AddBookView = () => import("@/views/AddBookView.vue");
-const GenreView = () => import("@/views/GenreView.vue");
+// const GenreView = () => import("@/views/GenreView.vue");
+const TGenreView = () => import("@/views/tempViews/TGenreView.vue");
 
 // @todo: error handling? 404?
 
@@ -59,10 +60,15 @@ const routes = [
     name: "addBook",
     component: AddBookView,
   },
+  // {
+  //   path: "/genres/:genre",
+  //   name: "genreView",
+  //   component: GenreView,
+  // },
   {
-    path: "/genres/:genre",
-    name: "genreView",
-    component: GenreView,
+    path: "/genres/view/:id",
+    name: "TGenreView",
+    component: TGenreView,
   },
 ];
 

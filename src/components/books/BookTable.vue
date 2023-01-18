@@ -5,16 +5,18 @@
         <router-link :to="navigateToBook">{{ title }}</router-link>
       </div>
       <div class="col-span-2">
-        <p>{{ authors }}</p>
+        <!-- <router-link :to="'authors/view/' + author_info[0].author_id">{{
+          author_info[0].full_name
+        }}</router-link> -->
       </div>
       <div class="col-span-3">
-        <p class="capitalize">{{ genres }}</p>
+        <!-- <p class="capitalize">{{ genres }}</p> -->
       </div>
       <div>
-        <p class="capitalize">{{ format_name }}</p>
+        <!-- <p class="capitalize">{{ format_name }}</p> -->
       </div>
       <div>
-        <p>{{ num_pages }}</p>
+        <!-- <p>{{ num_pages }}</p> -->
       </div>
     </div>
   </section>
@@ -43,7 +45,7 @@ export default {
     const that = this;
     const {
       title,
-      authors,
+      author_info,
       num_pages,
       genres,
       format_name,
@@ -52,7 +54,7 @@ export default {
     } = that.bookDetails;
     return {
       title,
-      authors,
+      author_info,
       num_pages,
       genres,
       format_name,

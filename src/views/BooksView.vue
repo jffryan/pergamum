@@ -2,7 +2,7 @@
   <div class="grid grid-cols-12 gap-2 py-20 text-dreamer-white">
     <basic-hero title="Books" />
     <div class="col-start-2 col-span-10">
-      <table-shelf :displayed-books="displayedBooks" />
+      <table-shelf :displayed-books="books" />
     </div>
   </div>
 </template>
@@ -15,7 +15,7 @@ import TableShelf from "@/components/shelves/TableShelf.vue";
 
 import { mapState } from "vuex";
 
-import getBooks from "@/api/getBooksNode";
+import getBooks from "@/api/getAllBooks";
 import { FETCH_BOOKS } from "@/store/variables";
 
 export default {
@@ -24,15 +24,21 @@ export default {
     BasicHero,
     TableShelf,
   },
+  data() {
+    return {
+      books: [],
+    };
+  },
   computed: {
     displayedBooks() {
-      return this.filteredBooks.slice(0, 10);
+      return true;
+      // return this.filteredBooks.slice(0, 10);
     },
     ...mapState(["filteredBooks"]),
   },
   async mounted() {
     let bookResponse = await getBooks();
-    this.books = bookResponse;
+    this.books = bookResponse.data;
     this.$store.dispatch(FETCH_BOOKS);
   },
 };

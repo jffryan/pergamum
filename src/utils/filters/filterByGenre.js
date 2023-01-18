@@ -3,7 +3,6 @@ const filterByGenre = function (array, genre) {
     let tempArray = arr.genre.map((el) => {
       return el.toLowerCase();
     });
-    console.log(tempArray);
     return tempArray.includes(genre);
   });
   return result;

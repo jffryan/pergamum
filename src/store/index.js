@@ -1,6 +1,6 @@
 import { createStore } from "vuex";
 
-import getBooks from "@/api/getBooksNode";
+import getAllBooks from "@/api/getAllBooks";
 import filterByYear from "@/utils/filters/filterByYear";
 import filterByGenre from "@/utils/filters/filterByGenre";
 
@@ -70,7 +70,7 @@ export const mutations = {
 
 export const actions = {
   [FETCH_BOOKS]: async (context) => {
-    const bookList = await getBooks();
+    const bookList = await getAllBooks();
     context.commit(RECEIVE_BOOKS, bookList);
   },
 };
