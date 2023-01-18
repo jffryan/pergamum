@@ -72,6 +72,10 @@ export default {
           text: "On my radar",
           path: "/radar",
         },
+        {
+          text: "Testing",
+          path: "/testing",
+        },
       ],
     };
   },

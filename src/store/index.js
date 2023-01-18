@@ -1,6 +1,6 @@
 import { createStore } from "vuex";
 
-import getAllBooks from "@/api/getAllBooks";
+import { getAllBooks } from "@/api/bookController.js";
 import filterByYear from "@/utils/filters/filterByYear";
 import filterByGenre from "@/utils/filters/filterByGenre";
 

@@ -15,7 +15,7 @@ import TableShelf from "@/components/shelves/TableShelf.vue";
 
 import { mapState } from "vuex";
 
-import getBooks from "@/api/getAllBooks";
+import { getBooks } from "@/api/bookController.js";
 import { FETCH_BOOKS } from "@/store/variables";
 
 export default {

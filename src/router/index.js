@@ -11,6 +11,7 @@ const RadarView = () => import("@/views/RadarView.vue");
 const AddBookView = () => import("@/views/AddBookView.vue");
 // const GenreView = () => import("@/views/GenreView.vue");
 const TGenreView = () => import("@/views/tempViews/TGenreView.vue");
+const TestingView = () => import("@/views/TestingView.vue");
 
 // @todo: error handling? 404?
 
@@ -69,6 +70,11 @@ const routes = [
     path: "/genres/view/:id",
     name: "TGenreView",
     component: TGenreView,
+  },
+  {
+    path: "/testing",
+    name: "testing",
+    component: TestingView,
   },
 ];
 
